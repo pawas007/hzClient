@@ -1,8 +1,6 @@
 import {Tabs} from 'expo-router';
 import React from 'react';
-import {Platform,Text, View} from 'react-native';
-
-
+import {Platform, Text, View} from 'react-native';
 import {Colors} from '@/constants/Colors';
 import {useColorScheme} from '@/hooks/useColorScheme';
 import {FontAwesome} from "@expo/vector-icons";
@@ -16,12 +14,12 @@ export default function TabLayout() {
                 // @ts-ignore
                 tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
                 headerShown: false,
-                tabBarStyle: Platform.select({
-                    ios: {
-                        position: 'absolute',
-                    },
-                    default: {},
-                }),
+                tabBarStyle: {
+                    height: 60,
+                    // @ts-ignore
+                    backgroundColor: Colors[colorScheme ?? 'light'].background,
+                    paddingBottom: Platform.OS === 'ios' ? 10 : 0, // Для вирівнювання на iOS
+                },
             }}>
             <Tabs.Screen
                 name="index"
@@ -29,7 +27,6 @@ export default function TabLayout() {
                     headerShown: true,
                     title: 'Home',
                     tabBarIcon: ({color}) => <FontAwesome size={28} name="home" color={color}/>
-
                 }}
             />
             <Tabs.Screen
@@ -37,8 +34,8 @@ export default function TabLayout() {
                 options={{
                     title: 'Products',
                     tabBarIcon: ({color}) => (
-                        <View style={{ position: 'relative', justifyContent: 'center', alignItems: 'center' }}>
-                            <FontAwesome size={28} name="shopping-cart" color={color} />
+                        <View style={{position: 'relative', justifyContent: 'center', alignItems: 'center'}}>
+                            <FontAwesome size={28} name="shopping-cart" color={color}/>
                             <View style={{
                                 position: 'absolute',
                                 top: -6,
@@ -50,9 +47,7 @@ export default function TabLayout() {
                                 justifyContent: 'center',
                                 alignItems: 'center'
                             }}>
-                                <Text>
-                                    7
-                                </Text>
+                                <Text style={{fontSize: 12, color: 'white', fontWeight: 'bold'}}>7</Text>
                             </View>
                         </View>
                     ),
@@ -61,6 +56,7 @@ export default function TabLayout() {
             <Tabs.Screen
                 name="settings"
                 options={{
+                     headerShown: true,
                     title: 'Settings',
                     tabBarIcon: ({color}) => <FontAwesome size={28} name="cog" color={color}/>
                 }}

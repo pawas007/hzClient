@@ -9,7 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ostap666.hzClient"
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +19,6 @@
       }
     },
     "web": {
-
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"

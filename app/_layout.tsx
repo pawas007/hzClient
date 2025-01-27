@@ -1,5 +1,5 @@
-import { ThemeProvider} from '@react-navigation/native';
-import {Colors} from "@/constants/Colors";
+import { ThemeProvider } from '@react-navigation/native';
+import { Colors } from "@/constants/Colors";
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -8,11 +8,12 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 import "../global.css";
 import { useTheme } from '@/hooks/useTheme';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-    const { colorScheme, isLoading } = useTheme(); // Використовуємо кастомний хук
+    const { colorScheme, isLoading } = useTheme();
 
     const [loaded] = useFonts({
         SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
@@ -29,14 +30,15 @@ export default function RootLayout() {
     }
 
     return (
-        // @ts-ignore
-        <ThemeProvider value={colorScheme === 'light' ? Colors.light : Colors.dark}>
-            <Stack>
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-                <Stack.Screen name="+not-found" options={{ headerShown: true }} />
-            </Stack>
-            <StatusBar style="auto" />
-        </ThemeProvider>
+        <SafeAreaProvider>
+            <ThemeProvider value={colorScheme === 'light' ? Colors.light : Colors.dark}>
+                    <Stack>
+                        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                        <Stack.Screen name="+not-found" options={{ headerShown: true }} />
+                    </Stack>
+                    <StatusBar style="auto" />
+                </ThemeProvider>
+        </SafeAreaProvider>
     );
 }

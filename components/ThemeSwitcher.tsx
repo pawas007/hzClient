@@ -7,7 +7,7 @@ export default function ThemeSwitcher() {
     const { colorScheme, toggleTheme } = useTheme();
 
     return (
-        <View className="flex-row items-center space-x-4">
+        <View className="flex-row justify-center items-center space-x-4 mt-5">
             <Switch
                 value={colorScheme === "dark"}
                 onValueChange={toggleTheme}

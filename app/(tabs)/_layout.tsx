@@ -1,9 +1,10 @@
 import {Tabs} from 'expo-router';
 import React from 'react';
-import {Platform, Text, View} from 'react-native';
-import {Colors} from '@/constants/Colors';
+import {Platform, View} from 'react-native';
+import {Themes} from '@/constants/Themes';
 import {useColorScheme} from '@/hooks/useColorScheme';
 import {FontAwesome} from "@expo/vector-icons";
+import Texts from "@/components/Texts";
 
 export default function TabLayout() {
     const colorScheme = useColorScheme();
@@ -12,12 +13,12 @@ export default function TabLayout() {
         <Tabs
             screenOptions={{
                 // @ts-ignore
-                tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+                tabBarActiveTintColor: Themes[colorScheme ?? 'light'].tint,
                 headerShown: false,
                 tabBarStyle: {
                     height: 60,
                     // @ts-ignore
-                    backgroundColor: Colors[colorScheme ?? 'light'].background,
+                    backgroundColor: Themes[colorScheme ?? 'light'].background,
                     paddingBottom: Platform.OS === 'ios' ? 10 : 0, // Для вирівнювання на iOS
                 },
             }}>
@@ -36,19 +37,19 @@ export default function TabLayout() {
                     tabBarIcon: ({color}) => (
                         <View style={{position: 'relative', justifyContent: 'center', alignItems: 'center'}}>
                             <FontAwesome size={28} name="shopping-cart" color={color}/>
-                            <View style={{
-                                position: 'absolute',
-                                top: -6,
-                                right: -6,
-                                backgroundColor: 'red',
-                                borderRadius: 10,
-                                width: 18,
-                                height: 18,
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}>
-                                <Text style={{fontSize: 12, color: 'white', fontWeight: 'bold'}}>7</Text>
-                            </View>
+                            {/*<View style={{*/}
+                            {/*    position: 'absolute',*/}
+                            {/*    top: -6,*/}
+                            {/*    right: -6,*/}
+                            {/*    backgroundColor: 'red',*/}
+                            {/*    borderRadius: 10,*/}
+                            {/*    width: 18,*/}
+                            {/*    height: 18,*/}
+                            {/*    justifyContent: 'center',*/}
+                            {/*    alignItems: 'center'*/}
+                            {/*}}>*/}
+                            {/*    <Texts style={{fontSize: 12, color: 'white', fontWeight: 'bold'}}>7</Texts>*/}
+                            {/*</View>*/}
                         </View>
                     ),
                 }}

@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@react-navigation/native';
-import { Colors } from "@/constants/Colors";
+import { Themes } from "@/constants/Themes";
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 import "../global.css";
 import { useTheme } from '@/hooks/useTheme';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -16,7 +16,7 @@ export default function RootLayout() {
     const { colorScheme, isLoading } = useTheme();
 
     const [loaded] = useFonts({
-        SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+        Roboto: require('../assets/fonts/Roboto-Regular.ttf'),
     });
 
     useEffect(() => {
@@ -31,7 +31,7 @@ export default function RootLayout() {
 
     return (
         <SafeAreaProvider>
-            <ThemeProvider value={colorScheme === 'light' ? Colors.light : Colors.dark}>
+            <ThemeProvider value={colorScheme === 'light' ? Themes.light : Themes.dark}>
                     <Stack>
                         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                         <Stack.Screen name="(auth)" options={{ headerShown: false }} />

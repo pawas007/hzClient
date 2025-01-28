@@ -1,6 +1,6 @@
-import {fonts} from "@react-navigation/native/src/theming/fonts";
+import {fonts} from "@/assets/fonts/fonts";
 
-export const Colors = {
+export const Themes = {
 
     light: {
         dark: false,

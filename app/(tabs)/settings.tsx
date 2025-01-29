@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Texts from "@/components/Texts";
 import {useRouter} from "expo-router";
 
-const router = useRouter();
+
 const settings = [
     {name: 'My Details', screen: '/clientarea/account', icon: 'user'},
     {name: 'Contacts', screen: '/clientarea/account/contacts', icon: 'address-book'},
@@ -14,10 +14,11 @@ const settings = [
     {name: 'Security Settings', screen: '/clientarea/account/security', icon: 'cog'},
     {name: 'Email History', screen: '/clientarea.php?action=emails', icon: 'envelope'},
     {name: 'User Management', screen: '/account/users', icon: 'users'},
-    {name: 'Logout', screen: '/sign-in', icon: 'exit'},
+    {name: 'Logout', screen: '/sign-in', icon: 'user'},
 ];
 
 export default function SettingsScreen() {
+    const router = useRouter();
     const handleNavigation = (screen: string) => {
         router.push('/sign-in');
         alert(`Navigate to ${screen}`);

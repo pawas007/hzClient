@@ -1,6 +1,7 @@
-import React, {useState} from "react";
-import {View, TextInput, TouchableOpacity, Animated} from "react-native";
-import {useRouter} from "expo-router";
+import React, { useState } from "react";
+import { View, TextInput, TouchableOpacity, Dimensions } from "react-native";
+import { useRouter } from "expo-router";
+import Animated, { Easing, useSharedValue, withTiming } from "react-native-reanimated";
 import LogoDark from "@/assets/images/logo-dark";
 // @ts-ignore
 import Texts from "@/components/Texts";
@@ -12,9 +13,13 @@ export default function SignIn() {
     const [error, setError] = useState("");
     const [isValidated, setIsValidated] = useState(false);
 
-    const logoTranslateY = new Animated.Value(0); // Логотип починається вгорі
-    const logoScale = new Animated.Value(1); // Початковий масштаб логотипа
-    const formOpacity = new Animated.Value(1); // Початкова видимість форми (інпутів)
+    // Отримуємо висоту екрану
+    const { height } = Dimensions.get("window");
+
+    // Використовуємо useSharedValue для створення анімованих значень
+    const logoTranslateY = useSharedValue(0); // Початкова позиція логотипа
+    const logoScale = useSharedValue(1);
+    const formOpacity = useSharedValue(1);
 
     const handleLogin = () => {
         if (email !== "client@email.com" || password !== "password") {
@@ -23,18 +28,22 @@ export default function SignIn() {
             setError("");
             setIsValidated(true);
 
-            Animated.sequence([
-                Animated.timing(logoTranslateY, {
-                    toValue: -100,
-                    duration: 1000,
-                    useNativeDriver: true,
-                }),
-                Animated.timing(logoScale, {
-                    toValue: 1.5, // Збільшуємо логотип
-                    duration: 1000,
-                    useNativeDriver: true,
-                }),
-            ]).start();
+            // Просто зміщаємо логотип вниз
+            logoTranslateY.value = withTiming(110, { // Зміщуємо логотип вниз на 50 одиниць
+                duration: 1000,
+                easing: Easing.ease,
+            });
+            logoScale.value = withTiming(1.5, {
+                duration: 1000,
+                easing: Easing.ease,
+            });
+
+            // Анімація для форми
+            formOpacity.value = withTiming(0, {
+                duration: 500,
+                easing: Easing.ease,
+            });
+
             setTimeout(() => {
                 router.push("/");
             }, 2000);
@@ -45,17 +54,20 @@ export default function SignIn() {
         <View className="flex-1 justify-center items-center bg-white dark:bg-black px-10">
             <Animated.View
                 style={{
-                    transform: [{translateY: logoTranslateY}, {scale: logoScale}],
+                    transform: [
+                        { translateY: logoTranslateY }, // Анімація по вертикалі
+                        { scale: logoScale },
+                    ],
                 }}
                 className="mb-10"
             >
-                <LogoDark/>
+                <LogoDark />
             </Animated.View>
 
             <Animated.View
                 style={{
                     opacity: formOpacity,
-                    width: '100%'
+                    width: '100%',
                 }}
                 className="w-full"
             >

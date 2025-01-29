@@ -42,7 +42,7 @@ export default function HomeScreen() {
                             <View className="flex items-center">
                                 <Icon name="ticket" size={30} color="#4b8dff"/>
                                 <Texts
-                                    className="text-center text-lg  text-primary-700 mt-2 dark:text-white">0</Texts>
+                                    className="text-center text-lg  text-primary-700 mt-2 dark:text-white">2</Texts>
                             </View>
                         </TouchableOpacity>
                     </View>

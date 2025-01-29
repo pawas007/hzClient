@@ -5,74 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6733cdf3-26de-48a5-9e6d-154f923290d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fonts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-dark.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Texts.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/102.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/1024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/108.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/167.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/172.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/196.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/216.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/234.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/258.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/55.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/58.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/66.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/80.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/87.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/88.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/92.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/ItunesArtwork@2x.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(auth)/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/sign-in.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/products/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/SpaceMono-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/adaptive-icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/partial-react-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/react-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/react-logo@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/react-logo@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/splash-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/Colors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/Themes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useThemeColor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useThemeColor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo-dark.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/logo-dark.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/102.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/1024.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/adaptive-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/108.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/167.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/172.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/196.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/216.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/234.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/258.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/80.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/87.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/88.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/92.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/App-Icon-1024x1024@1x.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +80,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\laragon\bin\php\php-7.4.19-Win32-vc15-x64\php.exe" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.0" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -99,23 +94,23 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "jsx.switch.disabled": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/pawa/projects/hzClient/assets/images",
+    "last_opened_file_path": "/Users/mac/projects/hzClientApp/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "\\\\wsl.localhost\\Ubuntu-22.04\\home\\pawa\\projects\\hzClient\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "/Users/mac/projects/hzClientApp/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/ios/hzClient/Images.xcassets/AppIcon.appiconset" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\assets\images" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\ios\hzClient\Images.xcassets\AppIcon.appiconset" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\assets\fonts" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\app\(tabs)" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\app\(tabs)\products" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\assets\images" />
@@ -166,6 +161,7 @@
       <workItem from="1737999211713" duration="5703000" />
       <workItem from="1738005835796" duration="570000" />
       <workItem from="1738006454442" duration="1268000" />
+      <workItem from="1738107519195" duration="1678000" />
     </task>
     <servers />
   </component>

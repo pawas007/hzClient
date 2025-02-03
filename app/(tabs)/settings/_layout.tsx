@@ -1,15 +1,16 @@
-import React from "react";
 import { Stack } from "expo-router";
+import React from "react";
 
-export default function AuthLayout() {
+export default function vpsLayout() {
   return (
     <Stack>
       <Stack.Screen
-        name="sign-in"
+        name="index"
         options={{
           headerShown: false,
+          title: "Settings",
         }}
-      />
+      ></Stack.Screen>
     </Stack>
   );
 }

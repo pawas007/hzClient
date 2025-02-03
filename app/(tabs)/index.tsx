@@ -2,6 +2,7 @@ import React from "react";
 import {View, TouchableOpacity, ScrollView} from "react-native";
 // @ts-ignore
 import Icon from "react-native-vector-icons/FontAwesome";
+// @ts-ignore
 import Texts from "@/components/Texts";
 
 const notifications = [
@@ -15,7 +16,36 @@ export default function HomeScreen() {
     return (
         <ScrollView>
             <View className="m-3">
-                <Texts className="text-black dark:text-white text-lg font-medium mb-4">Notification Board</Texts>
+                {/* Finance Section */}
+                <View className="mt-6">
+                    <View className="bg-white dark:bg-primary-900 p-4 rounded-lg shadow-md">
+                        <Texts className="text-gray-500 dark:text-white uppercase text-sm font-normal mb-2">
+                            Finance
+                        </Texts>
+                        <Texts className="text-xl text-black dark:text-white font-normal">€0.00 Euro</Texts>
+                        <Texts className="text-md text-gray-500 dark:text-white">Balance</Texts>
+
+
+                        <View className="flex flex-row justify-center mt-4">
+                            <TouchableOpacity
+                                className="flex-1 p-4 bg-blue-500 dark:bg-primary-dark rounded-lg mr-2"
+                                onPress={() => alert("Go to Pay")}
+                            >
+                                <Texts className="text-center text-white">Pay</Texts>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                className="flex-1 p-4 bg-blue-500 dark:bg-primary-dark rounded-lg mr-2"
+                                onPress={() => alert("Add Funds")}
+                            >
+                                <Texts className="text-center text-blue-500 dark:text-white">Add Funds</Texts>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+
+                <Texts className="text-black dark:text-white text-lg font-medium my-4">
+                    Notification Board
+                </Texts>
                 {notifications.map((notification, index) => (
                     <View
                         key={index}
@@ -23,26 +53,30 @@ export default function HomeScreen() {
                     >
                         <View className="flex flex-row items-center">
                             <Icon name={notification.icon} size={24} color="#4CAF50"/>
-                            <Texts className="text-primary-700 dark:text-white text-lg  ml-2">
+                            <Texts className="text-primary-700 dark:text-white text-lg ml-2">
                                 {notification.title}
                             </Texts>
                         </View>
-                        <Texts className="text-primary-700 dark:text-white text-lg ">{notification.count}</Texts>
+                        <Texts className="text-primary-700 dark:text-white text-lg">
+                            {notification.count}
+                        </Texts>
                     </View>
                 ))}
 
-                <View className="mt-1   rounded-lg ">
+                <View className="mt-6">
                     <View className="text-center mt-4">
-                        <Texts className="text-lg text-gray-600 dark:text-white font-normal">Tickets require your
-                            attention</Texts>
+                        <Texts className="text-lg text-gray-600 dark:text-white font-normal">
+                            Tickets require your attention
+                        </Texts>
                         <TouchableOpacity
                             className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md mt-4"
                             onPress={() => alert("Navigate to tickets")}
                         >
                             <View className="flex items-center">
                                 <Icon name="ticket" size={30} color="#4b8dff"/>
-                                <Texts
-                                    className="text-center text-lg  text-primary-700 mt-2 dark:text-white">2</Texts>
+                                <Texts className="text-center text-lg text-primary-700 mt-2 dark:text-white">
+                                    2
+                                </Texts>
                             </View>
                         </TouchableOpacity>
                     </View>
@@ -55,7 +89,7 @@ export default function HomeScreen() {
                             >
                                 <View className="flex items-center">
                                     <Icon name="plus" size={30} color="#4b8dff"/>
-                                    <Texts className="text-center text-lg  text-primary-700 mt-2 dark:text-white">
+                                    <Texts className="text-center text-lg text-primary-700 mt-2 dark:text-white">
                                         Submit Ticket
                                     </Texts>
                                 </View>
@@ -69,8 +103,9 @@ export default function HomeScreen() {
                                 <View className="flex items-center">
                                     <Icon name="comments" size={30} color="#4b8dff"/>
                                     <Texts
-                                        style={{fontFamily: 'Roboto'}}
-                                        className="text-center text-lg  text-primary-700 mt-2 dark:text-white">
+
+                                        className="text-center text-lg text-primary-700 mt-2 dark:text-white"
+                                    >
                                         Live chat
                                     </Texts>
                                 </View>
@@ -85,8 +120,9 @@ export default function HomeScreen() {
                         >
                             <View className="flex items-center">
                                 <Icon name="info-circle" size={30} color="#4b8dff"/>
-                                <Texts className="text-center text-lg text-primary-700  mt-2 dark:text-white"
-                                       style={{fontFamily: 'Roboto'}}>
+                                <Texts
+                                    className="text-center text-lg text-primary-700 mt-2 dark:text-white"
+                                >
                                     Knowledge Base
                                 </Texts>
                             </View>

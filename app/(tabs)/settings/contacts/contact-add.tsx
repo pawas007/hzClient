@@ -127,7 +127,7 @@ export default function ContactAddScreen() {
               onPress={() => handleSubmit()}
               className="w-full mt-6  mb-4 p-4 bg-indigo rounded-lg shadow-md items-center"
             >
-              <Texts className="text-white text-lg">Add Contact</Texts>
+              <Texts className=" text-lg">Add Contact</Texts>
             </TouchableOpacity>
           </>
         )}

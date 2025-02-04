@@ -39,9 +39,7 @@ export default function Menu() {
             <View className="flex flex-row justify-between items-center">
               <View className="flex flex-row items-center">
                 <Icon name={item.icon} size={24} color="#4CAF50" />
-                <Texts className="text-primary-700 dark:text-white text-lg ml-2">
-                  {item.name}
-                </Texts>
+                <Texts className="  text-lg ml-2">{item.name}</Texts>
               </View>
             </View>
           </TouchableOpacity>

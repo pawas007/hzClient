@@ -124,14 +124,14 @@ export default function ContactEditScreen() {
               onPress={() => handleSubmit()}
               className="w-full mb-4 p-4 bg-indigo rounded-lg shadow-md items-center"
             >
-              <Texts className="text-white text-lg">Save Changes</Texts>
+              <Texts className=" text-lg">Save Changes</Texts>
             </TouchableOpacity>
 
             <TouchableOpacity
               onPress={() => navigation.goBack()}
               className="w-full   mb-4 p-4 bg-indigo rounded-lg shadow-md items-center"
             >
-              <Texts className="text-white text-lg">Cancel</Texts>
+              <Texts className=" text-lg">Cancel</Texts>
             </TouchableOpacity>
           </>
         )}

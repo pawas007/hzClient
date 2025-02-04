@@ -102,12 +102,10 @@ export default function ContactsScreen() {
         renderItem={({ item }) => (
           <View className="flex flex-row justify-between items-center mb-4 p-4 rounded-lg bg-primary-100 dark:bg-primary-900 shadow-sm">
             <View>
-              <Texts className="text-primary-700 dark:text-white font-bold">
+              <Texts className="  font-bold">
                 {item.firstName} {item.lastName}
               </Texts>
-              <Texts className="text-gray-500 dark:text-white pt-1">
-                {item.email}
-              </Texts>
+              <Texts className="  pt-1">{item.email}</Texts>
             </View>
             <View className="flex-row gap-3">
               <TouchableOpacity
@@ -131,7 +129,7 @@ export default function ContactsScreen() {
         onPress={() => handleAddContact()}
         className="w-full mt-6  mb-4 p-4 bg-indigo rounded-lg shadow-md items-center"
       >
-        <Texts className="text-white text-lg">Add Contact</Texts>
+        <Texts className=" text-lg">Add Contact</Texts>
       </TouchableOpacity>
     </View>
   );

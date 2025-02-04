@@ -75,14 +75,12 @@ export default function SignIn() {
             style={{ opacity: formOpacity, width: "100%" }}
             className="w-full"
           >
-            <Texts className="text-primary-700 dark:text-white mb-1">
-              Email
-            </Texts>
+            <Texts className="  mb-1">Email</Texts>
             <TextInput
               value={values.email}
               onChangeText={handleChange("email")}
               onBlur={handleBlur("email")}
-              className="w-full p-3 bg-gray-100 border border-border dark:bg-gray-800 text-primary-700 dark:text-white rounded-lg"
+              className="w-full p-3 bg-gray-100 border border-border dark:bg-gray-800   rounded-lg"
               keyboardType="email-address"
               autoCapitalize="none"
             />
@@ -92,15 +90,13 @@ export default function SignIn() {
               </Texts>
             )}
 
-            <Texts className="text-primary-700 dark:text-white mt-4 mb-1">
-              Password
-            </Texts>
+            <Texts className="  mt-4 mb-1">Password</Texts>
             <TextInput
               value={values.password}
               onChangeText={handleChange("password")}
               onBlur={handleBlur("password")}
               secureTextEntry
-              className="w-full p-3 bg-gray-100 border border-border dark:bg-gray-800 text-primary-700 dark:text-white rounded-lg"
+              className="w-full p-3 bg-gray-100 border border-border dark:bg-gray-800   rounded-lg"
             />
             {errors.password && touched.password && (
               <Texts className="text-[rgba(197,49,49,0.7)] mt-2">
@@ -112,7 +108,7 @@ export default function SignIn() {
               onPress={() => handleSubmit()}
               className="w-full mt-6 p-4 bg-indigo rounded-lg shadow-md items-center"
             >
-              <Texts className="text-white text-lg">Login</Texts>
+              <Texts className=" text-lg">Login</Texts>
             </TouchableOpacity>
           </Animated.View>
         )}

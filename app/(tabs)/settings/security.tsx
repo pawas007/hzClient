@@ -52,29 +52,23 @@ export default function SecuritySettings() {
             touched={touched.confirmPassword}
           />
           <View className="mt-6">
-            <Texts className="text-primary-700 dark:text-white text-lg mb-2">
-              API Key
-            </Texts>
+            <Texts className="  text-lg mb-2">API Key</Texts>
             <TouchableOpacity
               onPress={handleGenerateApiKey}
               className="w-full p-4 bg-indigo rounded-lg shadow-md items-center"
             >
-              <Texts className="text-white text-lg">Generate new key</Texts>
+              <Texts className=" text-lg">Generate new key</Texts>
             </TouchableOpacity>
 
             {apiKey ? (
               <View className="mt-3 p-3 border border-gray-300 dark:border-gray-600 rounded-lg">
-                <Texts className="text-primary-700 dark:text-white">
-                  {apiKey}
-                </Texts>
+                <Texts className=" ">{apiKey}</Texts>
               </View>
             ) : null}
           </View>
 
           <View className="mt-6">
-            <Texts className="text-primary-700 dark:text-white text-lg mb-2">
-              IP Access List
-            </Texts>
+            <Texts className="  text-lg mb-2">IP Access List</Texts>
             <FormField
               label="Allowed IP"
               value={values.ipAddress}
@@ -86,15 +80,13 @@ export default function SecuritySettings() {
               onPress={() => Alert.alert("IP List", "IP added successfully")}
               className="w-full p-4 bg-indigo rounded-lg shadow-md items-center"
             >
-              <Texts className="text-white text-lg">Add More</Texts>
+              <Texts className=" text-lg">Add More</Texts>
             </TouchableOpacity>
           </View>
           <View className="mt-6">
-            <Texts className="text-primary-700 dark:text-white text-lg mb-2">
-              Two-Factor Authentication
-            </Texts>
+            <Texts className="  text-lg mb-2">Two-Factor Authentication</Texts>
             <View className="p-3 bg-yellow-200 dark:bg-yellow-700 rounded-lg">
-              <Texts className="text-yellow-900 dark:text-white">
+              <Texts className="text-yellow-900 ">
                 We strongly encourage you to enable Two-Factor Authentication
                 for added security.
               </Texts>
@@ -105,14 +97,14 @@ export default function SecuritySettings() {
               }
               className="w-full mt-3 p-4 bg-indigo rounded-lg shadow-md items-center"
             >
-              <Texts className="text-white text-lg">Click here to Enable</Texts>
+              <Texts className=" text-lg">Click here to Enable</Texts>
             </TouchableOpacity>
           </View>
           <TouchableOpacity
             onPress={() => handleSubmit()}
             className="w-full mt-6 p-4 bg-indigo rounded-lg shadow-md items-center"
           >
-            <Texts className="text-white text-lg">Save Changes</Texts>
+            <Texts className=" text-lg">Save Changes</Texts>
           </TouchableOpacity>
         </ScrollView>
       )}

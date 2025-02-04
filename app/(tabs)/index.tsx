@@ -18,18 +18,13 @@ export default function HomeScreen() {
   return (
     <ScrollView>
       <View className="p-3">
-        {/* Finance Section */}
         <View>
           <View className="bg-white dark:bg-primary-900 p-4 rounded-lg shadow-md">
-            <Texts className="text-gray-500 dark:text-white uppercase text-sm font-normal mb-2">
-              Finance
-            </Texts>
-            <Texts className="text-xl text-black dark:text-white font-normal">
+            <Texts className="uppercase text-xl mb-2">Finance</Texts>
+            <Texts className="text-xl text-black  font-normal">
               €0.00 Euro
             </Texts>
-            <Texts className="text-md text-gray-500 dark:text-white">
-              Balance
-            </Texts>
+            <Texts className="text-md  ">Balance</Texts>
 
             <View className="flex flex-row justify-center mt-4">
               <TouchableOpacity
@@ -38,7 +33,7 @@ export default function HomeScreen() {
                   showToast("success", "This is a success message!")
                 }
               >
-                <Texts className="text-center text-white">Pay</Texts>
+                <Texts className="text-center ">Pay</Texts>
               </TouchableOpacity>
               <TouchableOpacity
                 className="flex-1 p-4 bg-blue-500 dark:bg-primary-dark rounded-lg mr-2"
@@ -46,15 +41,13 @@ export default function HomeScreen() {
                   showToast("success", "This is a success message!")
                 }
               >
-                <Texts className="text-center text-blue-500 dark:text-white">
-                  Add Funds
-                </Texts>
+                <Texts className="text-center text-blue-500 ">Add Funds</Texts>
               </TouchableOpacity>
             </View>
           </View>
         </View>
 
-        <Texts className="text-black dark:text-white text-lg font-medium my-4">
+        <Texts className="text-black  text-lg font-medium my-4">
           Notification Board
         </Texts>
         {notifications.map((notification, index) => (
@@ -64,19 +57,15 @@ export default function HomeScreen() {
           >
             <View className="flex flex-row items-center">
               <Icon name={notification.icon} size={24} color="#4CAF50" />
-              <Texts className="text-primary-700 dark:text-white text-lg ml-2">
-                {notification.title}
-              </Texts>
+              <Texts className="  text-lg ml-2">{notification.title}</Texts>
             </View>
-            <Texts className="text-primary-700 dark:text-white text-lg">
-              {notification.count}
-            </Texts>
+            <Texts className="  text-lg">{notification.count}</Texts>
           </View>
         ))}
 
         <View className="mt-6">
           <View className="text-center mt-4">
-            <Texts className="text-lg text-gray-600 dark:text-white font-normal">
+            <Texts className="text-lg text-gray-600  font-normal">
               Tickets require your attention
             </Texts>
             <TouchableOpacity
@@ -85,9 +74,7 @@ export default function HomeScreen() {
             >
               <View className="flex items-center">
                 <Icon name="ticket" size={30} color="#4b8dff" />
-                <Texts className="text-center text-lg text-primary-700 mt-2 dark:text-white">
-                  2
-                </Texts>
+                <Texts className="text-center text-lg  mt-2 ">2</Texts>
               </View>
             </TouchableOpacity>
           </View>
@@ -100,7 +87,7 @@ export default function HomeScreen() {
               >
                 <View className="flex items-center">
                   <Icon name="plus" size={30} color="#4b8dff" />
-                  <Texts className="text-center text-lg text-primary-700 mt-2 dark:text-white">
+                  <Texts className="text-center text-lg  mt-2 ">
                     Submit Ticket
                   </Texts>
                 </View>
@@ -113,7 +100,7 @@ export default function HomeScreen() {
               >
                 <View className="flex items-center">
                   <Icon name="comments" size={30} color="#4b8dff" />
-                  <Texts className="text-center text-lg text-primary-700 mt-2 dark:text-white">
+                  <Texts className="text-center text-lg  mt-2 ">
                     Live chat
                   </Texts>
                 </View>
@@ -128,7 +115,7 @@ export default function HomeScreen() {
             >
               <View className="flex items-center">
                 <Icon name="info-circle" size={30} color="#4b8dff" />
-                <Texts className="text-center text-lg text-primary-700 mt-2 dark:text-white">
+                <Texts className="text-center text-lg  mt-2 ">
                   Knowledge Base
                 </Texts>
               </View>

@@ -34,9 +34,7 @@ export default function SettingsScreen() {
           >
             <View className="flex items-center">
               <Icon name={item.icon} size={30} color="#4b8dff" />
-              <Texts className="text-center text-lg text-primary-700 mt-2 dark:text-white">
-                {item.name}
-              </Texts>
+              <Texts className="text-center text-lg  mt-2 ">{item.name}</Texts>
             </View>
           </TouchableOpacity>
         ))}

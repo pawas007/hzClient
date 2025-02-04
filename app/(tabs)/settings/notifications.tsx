@@ -74,9 +74,7 @@ export default function NotificationsSettings() {
           />
 
           <View className="flex-row justify-between items-center mt-6">
-            <Texts className="text-primary-700 dark:text-white">
-              Newsletter Opt-out
-            </Texts>
+            <Texts className=" ">Newsletter Opt-out</Texts>
             <Switch
               value={values.newsletterOptOut}
               onValueChange={() =>
@@ -98,14 +96,14 @@ export default function NotificationsSettings() {
             }
             className="w-full mt-6 p-4 bg-indigo rounded-lg shadow-md items-center"
           >
-            <Texts className="text-white text-lg">Activate Telegram</Texts>
+            <Texts className=" text-lg">Activate Telegram</Texts>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => handleSubmit()}
             className="w-full mt-4 p-4 bg-indigo rounded-lg shadow-md items-center"
           >
-            <Texts className="text-white text-lg">Save Changes</Texts>
+            <Texts className=" text-lg">Save Changes</Texts>
           </TouchableOpacity>
         </ScrollView>
       )}

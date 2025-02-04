@@ -121,9 +121,7 @@ export default function UserInfoForm() {
             touched={touched.address2}
           />
 
-          <Texts className="text-primary-700 dark:text-white mb-1">
-            Country
-          </Texts>
+          <Texts className="  mb-1">Country</Texts>
           <Dropdown
             style={{
               height: 45,
@@ -155,9 +153,7 @@ export default function UserInfoForm() {
             onChange={(item) => setFieldValue("country", item.value)}
           />
 
-          <Texts className="text-primary-700 dark:text-white mb-1 mt-3">
-            Payment Method
-          </Texts>
+          <Texts className="  mb-1 mt-3">Payment Method</Texts>
           <Dropdown
             style={{
               height: 45,
@@ -190,9 +186,7 @@ export default function UserInfoForm() {
           />
 
           <View className="flex-row justify-between items-center mt-4">
-            <Texts className="text-primary-700 dark:text-white">
-              Separate Invoices
-            </Texts>
+            <Texts className=" ">Separate Invoices</Texts>
             <Switch
               value={values.separateInvoices}
               onValueChange={() =>
@@ -210,9 +204,7 @@ export default function UserInfoForm() {
           </View>
 
           <View className="flex-row justify-between items-center mt-4">
-            <Texts className="text-primary-700 dark:text-white">
-              Business?
-            </Texts>
+            <Texts className=" ">Business?</Texts>
             <Switch
               value={values.isBusiness}
               onValueChange={() =>
@@ -228,11 +220,11 @@ export default function UserInfoForm() {
               renderActiveText={false}
             />
           </View>
-            <TouchableOpacity
+          <TouchableOpacity
             onPress={() => handleSubmit()}
             className="w-full mt-6  mb-4 p-4 bg-indigo rounded-lg shadow-md items-center"
           >
-            <Texts className="text-white text-lg">Save Changes</Texts>
+            <Texts className=" text-lg">Save Changes</Texts>
           </TouchableOpacity>
         </ScrollView>
       )}

@@ -34,9 +34,7 @@ export default function Menu() {
           <TouchableOpacity
             key={index}
             onPress={() => handleNavigation(item.link)}
-            className={`item p-4 rounded-lg bg-primary-100 dark:bg-primary-900 shadow-sm mb-4 ${
-              item.link === "/account/paymentmethods" ? "item_active" : ""
-            }`}
+            className="item p-4 rounded-lg bg-primary-100 dark:bg-primary-900 shadow-sm mb-4"
           >
             <View className="flex flex-row justify-between items-center">
               <View className="flex flex-row items-center">

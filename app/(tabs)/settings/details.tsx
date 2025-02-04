@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { View, ScrollView, TextInput, Alert } from "react-native";
+import React from "react";
+import { View, ScrollView, Alert } from "react-native";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { Dropdown } from "react-native-element-dropdown";
@@ -127,7 +127,7 @@ export default function UserInfoForm() {
           <Dropdown
             style={{
               height: 45,
-              borderColor: "rgba(208, 205, 221, 1)", // primary-50 (м'який сірий)
+              borderColor: "rgba(208, 205, 221, 1)",
               borderWidth: 0.5,
               borderRadius: 8,
               paddingHorizontal: 8,
@@ -145,7 +145,7 @@ export default function UserInfoForm() {
               fontSize: 14,
               color: isDarkMode
                 ? "rgba(244, 243, 249, 1)"
-                : "rgba(38, 38, 79, 1)", // primary-100 (білий) / primary-900 (темний)
+                : "rgba(38, 38, 79, 1)",
             }}
             data={countries}
             labelField="label"
@@ -161,25 +161,25 @@ export default function UserInfoForm() {
           <Dropdown
             style={{
               height: 45,
-              borderColor: "rgba(208, 205, 221, 1)", // primary-50 (м'який сірий)
+              borderColor: "rgba(208, 205, 221, 1)",
               borderWidth: 0.5,
               borderRadius: 8,
               paddingHorizontal: 8,
               backgroundColor: isDarkMode
                 ? "rgba(38, 38, 79, 1)"
-                : "rgba(244, 243, 249, 1)", // primary-900 (темний) / primary-100 (світлий)
+                : "rgba(244, 243, 249, 1)",
             }}
             placeholderStyle={{
               fontSize: 14,
               color: isDarkMode
                 ? "rgba(196, 196, 196, 1)"
-                : "rgba(59, 60, 87, 1)", // dark (сірий) / primary-700 (темно-фіолетовий)
+                : "rgba(59, 60, 87, 1)",
             }}
             selectedTextStyle={{
               fontSize: 14,
               color: isDarkMode
                 ? "rgba(244, 243, 249, 1)"
-                : "rgba(38, 38, 79, 1)", // primary-100 (білий) / primary-900 (темний)
+                : "rgba(38, 38, 79, 1)",
             }}
             data={paymentMethods}
             labelField="label"
@@ -228,8 +228,7 @@ export default function UserInfoForm() {
               renderActiveText={false}
             />
           </View>
-
-          <TouchableOpacity
+            <TouchableOpacity
             onPress={() => handleSubmit()}
             className="w-full mt-6  mb-4 p-4 bg-indigo rounded-lg shadow-md items-center"
           >

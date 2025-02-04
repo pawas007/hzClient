@@ -27,9 +27,18 @@ export default function NotificationsSettings() {
         newsletterOptOut: false,
       }}
       validationSchema={validationSchema}
-      onSubmit={(values) => Alert.alert("Message", "Notification settings updated")}
+      onSubmit={(values) =>
+        Alert.alert("Message", "Notification settings updated")
+      }
     >
-      {({ handleChange, handleSubmit, values, setFieldValue, errors, touched }) => (
+      {({
+        handleChange,
+        handleSubmit,
+        values,
+        setFieldValue,
+        errors,
+        touched,
+      }) => (
         <ScrollView className="p-5">
           {/* Email */}
           <FormField
@@ -40,7 +49,6 @@ export default function NotificationsSettings() {
             touched={touched.email}
           />
 
-          {/* CC Ticket Replies */}
           <FormField
             label="CC Ticket Replies"
             value={values.ccTicketReplies}
@@ -49,7 +57,6 @@ export default function NotificationsSettings() {
             touched={touched.ccTicketReplies}
           />
 
-          {/* Skype */}
           <FormField
             label="Skype"
             value={values.skype}
@@ -58,7 +65,6 @@ export default function NotificationsSettings() {
             touched={touched.skype}
           />
 
-          {/* IM/Jabber */}
           <FormField
             label="IM/Jabber"
             value={values.imJabber}
@@ -67,11 +73,15 @@ export default function NotificationsSettings() {
             touched={touched.imJabber}
           />
 
-                <View className="flex-row justify-between items-center mt-6">
-            <Texts className="text-primary-700 dark:text-white">Newsletter Opt-out</Texts>
+          <View className="flex-row justify-between items-center mt-6">
+            <Texts className="text-primary-700 dark:text-white">
+              Newsletter Opt-out
+            </Texts>
             <Switch
               value={values.newsletterOptOut}
-              onValueChange={() => setFieldValue("newsletterOptOut", !values.newsletterOptOut)}
+              onValueChange={() =>
+                setFieldValue("newsletterOptOut", !values.newsletterOptOut)
+              }
               circleSize={24}
               barHeight={30}
               backgroundActive={"rgba(76, 120, 253, 1)"}
@@ -82,16 +92,16 @@ export default function NotificationsSettings() {
               renderActiveText={false}
             />
           </View>
-
-          {/* Activate Telegram Button */}
           <TouchableOpacity
-            onPress={() => Alert.alert("Telegram", "Activating Telegram Bot...")}
+            onPress={() =>
+              Alert.alert("Telegram", "Activating Telegram Bot...")
+            }
             className="w-full mt-6 p-4 bg-indigo rounded-lg shadow-md items-center"
           >
             <Texts className="text-white text-lg">Activate Telegram</Texts>
           </TouchableOpacity>
 
-            <TouchableOpacity
+          <TouchableOpacity
             onPress={() => handleSubmit()}
             className="w-full mt-4 p-4 bg-indigo rounded-lg shadow-md items-center"
           >

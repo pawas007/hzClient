@@ -2,8 +2,10 @@ import { Tabs } from "expo-router";
 import React from "react";
 import { Platform, View } from "react-native";
 import { Themes } from "@/constants/Themes";
-import { useColorScheme } from "@/hooks/useColorScheme";
+
+import { useColorScheme } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
+import Texts from "@/components/Texts";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -55,19 +57,25 @@ export default function TabLayout() {
               }}
             >
               <FontAwesome size={28} name="shopping-cart" color={color} />
-              {/*<View style={{*/}
-              {/*    position: 'absolute',*/}
-              {/*    top: -6,*/}
-              {/*    right: -6,*/}
-              {/*    backgroundColor: 'red',*/}
-              {/*    borderRadius: 10,*/}
-              {/*    width: 18,*/}
-              {/*    height: 18,*/}
-              {/*    justifyContent: 'center',*/}
-              {/*    alignItems: 'center'*/}
-              {/*}}>*/}
-              {/*    <Texts style={{fontSize: 12, color: 'white', fontWeight: 'bold'}}>7</Texts>*/}
-              {/*</View>*/}
+              <View
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: -10,
+                  backgroundColor: "rgba(130, 150, 255, 1)",
+                  borderRadius: 10,
+                  width: 16,
+                  height: 16,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Texts
+                  style={{ fontSize: 10, color: "white", fontWeight: "bold" }}
+                >
+                  7
+                </Texts>
+              </View>
             </View>
           ),
         }}

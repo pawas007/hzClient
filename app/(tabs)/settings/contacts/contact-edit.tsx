@@ -1,5 +1,5 @@
 import React from "react";
-import { View, ScrollView, TouchableOpacity, Alert } from "react-native";
+import { ScrollView, TouchableOpacity, Alert } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Formik } from "formik";
 import * as Yup from "yup";

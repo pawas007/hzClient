@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
     .required("Confirm Password is required"),
   ipAddress: Yup.string().matches(
     /^(\d{1,3}\.){3}\d{1,3}$/,
-    "Enter a valid IP address"
+    "Enter a valid IP address",
   ),
 });
 
@@ -36,27 +36,21 @@ export default function SecuritySettings() {
     >
       {({ handleChange, handleSubmit, values, errors, touched }) => (
         <ScrollView className="p-5">
-          {/* New Password */}
           <FormField
             label="New Password"
             value={values.newPassword}
             onChange={handleChange("newPassword")}
             error={errors.newPassword}
             touched={touched.newPassword}
-
           />
 
-          {/* Confirm Password */}
           <FormField
             label="Confirm New Password"
             value={values.confirmPassword}
             onChange={handleChange("confirmPassword")}
             error={errors.confirmPassword}
             touched={touched.confirmPassword}
-
           />
-
-          {/* API Key Section */}
           <View className="mt-6">
             <Texts className="text-primary-700 dark:text-white text-lg mb-2">
               API Key
@@ -70,12 +64,13 @@ export default function SecuritySettings() {
 
             {apiKey ? (
               <View className="mt-3 p-3 border border-gray-300 dark:border-gray-600 rounded-lg">
-                <Texts className="text-primary-700 dark:text-white">{apiKey}</Texts>
+                <Texts className="text-primary-700 dark:text-white">
+                  {apiKey}
+                </Texts>
               </View>
             ) : null}
           </View>
 
-          {/* IP Access List */}
           <View className="mt-6">
             <Texts className="text-primary-700 dark:text-white text-lg mb-2">
               IP Access List
@@ -94,26 +89,25 @@ export default function SecuritySettings() {
               <Texts className="text-white text-lg">Add More</Texts>
             </TouchableOpacity>
           </View>
-
-          {/* Two-Factor Authentication */}
           <View className="mt-6">
             <Texts className="text-primary-700 dark:text-white text-lg mb-2">
               Two-Factor Authentication
             </Texts>
             <View className="p-3 bg-yellow-200 dark:bg-yellow-700 rounded-lg">
               <Texts className="text-yellow-900 dark:text-white">
-                We strongly encourage you to enable Two-Factor Authentication for added security.
+                We strongly encourage you to enable Two-Factor Authentication
+                for added security.
               </Texts>
             </View>
             <TouchableOpacity
-              onPress={() => Alert.alert("2FA", "Enabling Two-Factor Authentication...")}
+              onPress={() =>
+                Alert.alert("2FA", "Enabling Two-Factor Authentication...")
+              }
               className="w-full mt-3 p-4 bg-indigo rounded-lg shadow-md items-center"
             >
               <Texts className="text-white text-lg">Click here to Enable</Texts>
             </TouchableOpacity>
           </View>
-
-          {/* Save Changes Button */}
           <TouchableOpacity
             onPress={() => handleSubmit()}
             className="w-full mt-6 p-4 bg-indigo rounded-lg shadow-md items-center"

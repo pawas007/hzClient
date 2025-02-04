@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  View,
-  TouchableOpacity,
-  ScrollView,
-  FlatList,
-  SafeAreaView,
-} from "react-native";
+import { View, TouchableOpacity, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useColorScheme } from "react-native";
 // @ts-ignore

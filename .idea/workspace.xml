@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6733cdf3-26de-48a5-9e6d-154f923290d9" name="Changes" comment="Add new page">
+    <list default="true" id="6733cdf3-26de-48a5-9e6d-154f923290d9" name="Changes" comment="Finish settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/sign-in.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/finance/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/finance/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/finance/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/finance/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useToast.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useToast.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/products/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/products/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-add.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-edit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-edit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-show.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-show.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/notifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/notifications.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/security.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/security.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useColorScheme.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +119,7 @@
       <workItem from="1737999211713" duration="5703000" />
       <workItem from="1738005835796" duration="570000" />
       <workItem from="1738006454442" duration="1268000" />
-      <workItem from="1738661760476" duration="6339000" />
+      <workItem from="1738661760476" duration="7590000" />
     </task>
     <task id="LOCAL-00001" summary="Add new page">
       <option name="closed" value="true" />
@@ -136,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738678797204</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finish settings">
+      <option name="closed" value="true" />
+      <created>1738679695004</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738679695004</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +169,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add new page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new page" />
+    <MESSAGE value="Finish settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish settings" />
   </component>
 </project>

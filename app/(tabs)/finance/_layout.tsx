@@ -6,11 +6,8 @@ export default function vpsLayout() {
     <Stack>
       <Stack.Screen
         name="index"
-        options={{
-          headerShown: false,
-          title: "Finance",
-        }}
-      ></Stack.Screen>
+        options={{ headerShown: false, title: "Finance" }}
+      />
     </Stack>
   );
 }

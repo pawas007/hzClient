@@ -25,6 +25,22 @@ export default function settings() {
           title: "Contacts",
         }}
       ></Stack.Screen>
+              <Stack.Screen
+        name="notifications"
+        options={{
+          headerShown: true,
+          title: "Notifications",
+        }}
+      ></Stack.Screen>
+              <Stack.Screen
+        name="users"
+        options={{
+          headerShown: true,
+          title: "User Management",
+        }}
+      ></Stack.Screen>
+
+        security
     </Stack>
   );
 }

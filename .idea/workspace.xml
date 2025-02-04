@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6733cdf3-26de-48a5-9e6d-154f923290d9" name="Changes" comment="Add new page">
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/settings/notifications.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/settings/security.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/settings/users.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-edit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-edit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-show.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-show.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FormField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,25 +32,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mac/projects/hzClient/app/(tabs)/settings/contacts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/mac/projects/hzClient/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "jsx.switch.disabled": "true",
+    "last_opened_file_path": "/Users/mac/projects/hzClient/app/(tabs)/settings",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Users/mac/projects/hzClient/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/(tabs)/settings/contacts" />
       <recent name="$PROJECT_DIR$/app/(tabs)/settings" />
+      <recent name="$PROJECT_DIR$/app/(tabs)/settings/contacts" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\assets\images" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\ios\hzClient\Images.xcassets\AppIcon.appiconset" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\pawa\projects\hzClient\assets\fonts" />
@@ -104,7 +104,7 @@
       <workItem from="1737999211713" duration="5703000" />
       <workItem from="1738005835796" duration="570000" />
       <workItem from="1738006454442" duration="1268000" />
-      <workItem from="1738661760476" duration="936000" />
+      <workItem from="1738661760476" duration="4965000" />
     </task>
     <task id="LOCAL-00001" summary="Add new page">
       <option name="closed" value="true" />
@@ -114,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738629444236</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add new page">
+      <option name="closed" value="true" />
+      <created>1738663232646</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738663232646</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

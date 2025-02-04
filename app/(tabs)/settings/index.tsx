@@ -8,40 +8,26 @@ import Texts from "@/components/Texts";
 import { useRouter } from "expo-router";
 
 const index = [
-  { name: "My Details", screen: "/clientarea/account", icon: "user" },
-  {
-    name: "Contacts",
-    screen: "/clientarea/account/contacts",
-    icon: "address-book",
-  },
-  {
-    name: "Notifications",
-    screen: "/clientarea/account/notifications",
-    icon: "bell",
-  },
-  {
-    name: "Security Settings",
-    screen: "/clientarea/account/security",
-    icon: "cog",
-  },
-  {
-    name: "Email History",
-    screen: "/clientarea.php?action=emails",
-    icon: "envelope",
-  },
+  { name: "My Details", screen: "/settings/details", icon: "user" },
+  { name: "Contacts", screen: "/settings/contacts", icon: "address-book" },
+  { name: "Notifications", screen: "/clientarea/account/notifications", icon: "bell" },
+  { name: "Security Settings", screen: "/clientarea/account/security", icon: "cog" },
+  { name: "Email History", screen: "/clientarea.php?action=emails", icon: "envelope" },
   { name: "User Management", screen: "/account/users", icon: "users" },
   { name: "Logout", screen: "/sign-in", icon: "user" },
-];
+] as const;
+
+
 
 export default function SettingsScreen() {
   const router = useRouter();
+
   const handleNavigation = (screen: string) => {
-    router.push("/sign-in");
-    alert(`Navigate to ${screen}`);
+    router.push(screen as any);
   };
 
   return (
-    <View className="flex-1 p-3 ">
+    <View className="flex-1 p-3">
       <ScrollView contentContainerStyle={{ gap: 8 }}>
         {index.map((item, index) => (
           <TouchableOpacity
@@ -51,13 +37,13 @@ export default function SettingsScreen() {
           >
             <View className="flex items-center">
               <Icon name={item.icon} size={30} color="#4b8dff" />
-              <Texts className="text-center text-lg  text-primary-700 mt-2 dark:text-white">
+              <Texts className="text-center text-lg text-primary-700 mt-2 dark:text-white">
                 {item.name}
               </Texts>
             </View>
           </TouchableOpacity>
         ))}
-        <ThemeSwitcher></ThemeSwitcher>
+        <ThemeSwitcher />
       </ScrollView>
     </View>
   );

@@ -10,14 +10,24 @@ import { useRouter } from "expo-router";
 const index = [
   { name: "My Details", screen: "/settings/details", icon: "user" },
   { name: "Contacts", screen: "/settings/contacts", icon: "address-book" },
-  { name: "Notifications", screen: "/clientarea/account/notifications", icon: "bell" },
-  { name: "Security Settings", screen: "/clientarea/account/security", icon: "cog" },
-  { name: "Email History", screen: "/clientarea.php?action=emails", icon: "envelope" },
+  {
+    name: "Notifications",
+    screen: "/clientarea/account/notifications",
+    icon: "bell",
+  },
+  {
+    name: "Security Settings",
+    screen: "/clientarea/account/security",
+    icon: "cog",
+  },
+  {
+    name: "Email History",
+    screen: "/clientarea.php?action=emails",
+    icon: "envelope",
+  },
   { name: "User Management", screen: "/account/users", icon: "users" },
   { name: "Logout", screen: "/sign-in", icon: "user" },
 ] as const;
-
-
 
 export default function SettingsScreen() {
   const router = useRouter();

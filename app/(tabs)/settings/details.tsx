@@ -1,164 +1,242 @@
-import React, {useState} from "react";
-import {View, ScrollView, TextInput, Alert} from "react-native";
-import {Formik} from "formik";
+import React, { useState } from "react";
+import { View, ScrollView, TextInput, Alert } from "react-native";
+import { Formik } from "formik";
 import * as Yup from "yup";
-import {Dropdown} from "react-native-element-dropdown";
+import { Dropdown } from "react-native-element-dropdown";
 import Texts from "@/components/Texts";
-import {TouchableOpacity} from "react-native";
-import {Switch} from "react-native-switch";
+import { TouchableOpacity } from "react-native";
+import { Switch } from "react-native-switch";
 import FormField from "@/components/FormField";
+import { useColorScheme } from "react-native";
 
 const countries = [
-    {label: "Ukraine (Україна)", value: "ua"},
-    {label: "United States", value: "us"},
-    {label: "Canada", value: "ca"},
-    {label: "Germany", value: "de"},
-    {label: "France", value: "fr"},
-    {label: "United Kingdom", value: "gb"},
-    {label: "Italy", value: "it"},
-    {label: "Spain", value: "es"},
-    {label: "Netherlands", value: "nl"},
-    {label: "Sweden", value: "se"},
+  { label: "Ukraine (Україна)", value: "ua" },
+  { label: "United States", value: "us" },
+  { label: "Canada", value: "ca" },
+  { label: "Germany", value: "de" },
+  { label: "France", value: "fr" },
+  { label: "United Kingdom", value: "gb" },
+  { label: "Italy", value: "it" },
+  { label: "Spain", value: "es" },
+  { label: "Netherlands", value: "nl" },
+  { label: "Sweden", value: "se" },
 ];
 
 const paymentMethods = [
-    {label: "Bank Transfer", value: "banktransfer"},
-    {label: "Paxum", value: "paxum"},
-    {label: "PayPal", value: "paypal"},
-    {label: "Stripe (Credit Cards)", value: "stripe"},
-    {label: "CoinGate (Crypto)", value: "coingate"},
+  { label: "Bank Transfer", value: "banktransfer" },
+  { label: "Paxum", value: "paxum" },
+  { label: "PayPal", value: "paypal" },
+  { label: "Stripe (Credit Cards)", value: "stripe" },
+  { label: "CoinGate (Crypto)", value: "coingate" },
 ];
 
 const validationSchema = Yup.object().shape({
-    firstName: Yup.string().required("First Name is required"),
-    lastName: Yup.string().required("Last Name is required"),
-    city: Yup.string().required("City is required"),
-    address1: Yup.string().required("Address 1 is required"),
-    state: Yup.string().required("State/Region is required"),
-    postcode: Yup.string().required("Zip Code is required"),
-    address2: Yup.string(),
-    country: Yup.string().required("Country is required"),
-    paymentMethod: Yup.string().required("Payment Method is required"),
+  firstName: Yup.string().required("First Name is required"),
+  lastName: Yup.string().required("Last Name is required"),
+  city: Yup.string().required("City is required"),
+  address1: Yup.string().required("Address 1 is required"),
+  state: Yup.string().required("State/Region is required"),
+  postcode: Yup.string().required("Zip Code is required"),
+  address2: Yup.string(),
+  country: Yup.string().required("Country is required"),
+  paymentMethod: Yup.string().required("Payment Method is required"),
 });
 
 export default function UserInfoForm() {
-    return (
+  const isDarkMode = useColorScheme() === "dark";
+  return (
+    <Formik
+      initialValues={{
+        firstName: "John",
+        lastName: "Doe",
+        country: "ua",
+        city: "Kyiv",
+        address1: "Main Street 1",
+        state: "Kyivska",
+        postcode: "01001",
+        address2: "Apt 5",
+        paymentMethod: "paypal",
+        separateInvoices: false,
+        isBusiness: false,
+      }}
+      validationSchema={validationSchema}
+      onSubmit={(values) => Alert.alert("Message", "User details updated")}
+    >
+      {({
+        handleChange,
+        handleSubmit,
+        values,
+        setFieldValue,
+        errors,
+        touched,
+      }) => (
+        <ScrollView className="p-5">
+          <FormField
+            label="First Name"
+            value={values.firstName}
+            onChange={handleChange("firstName")}
+            error={errors.firstName}
+            touched={touched.firstName}
+          />
+          <FormField
+            label="Last Name"
+            value={values.lastName}
+            onChange={handleChange("lastName")}
+            error={errors.lastName}
+            touched={touched.lastName}
+          />
+          <FormField
+            label="City"
+            value={values.city}
+            onChange={handleChange("city")}
+            error={errors.city}
+            touched={touched.city}
+          />
+          <FormField
+            label="Address 1"
+            value={values.address1}
+            onChange={handleChange("address1")}
+            error={errors.address1}
+            touched={touched.address1}
+          />
+          <FormField
+            label="State/Region"
+            value={values.state}
+            onChange={handleChange("state")}
+            error={errors.state}
+            touched={touched.state}
+          />
+          <FormField
+            label="Zip Code"
+            value={values.postcode}
+            onChange={handleChange("postcode")}
+            error={errors.postcode}
+            touched={touched.postcode}
+          />
+          <FormField
+            label="Address 2"
+            value={values.address2}
+            onChange={handleChange("address2")}
+            error={errors.address2}
+            touched={touched.address2}
+          />
 
-
-        <Formik
-            initialValues={{
-                firstName: "John",
-                lastName: "Doe",
-                country: "ua",
-                city: "Kyiv",
-                address1: "Main Street 1",
-                state: "Kyivska",
-                postcode: "01001",
-                address2: "Apt 5",
-                paymentMethod: "paypal",
-                separateInvoices: false,
-                isBusiness: false,
+          <Texts className="text-primary-700 dark:text-white mb-1">
+            Country
+          </Texts>
+          <Dropdown
+            style={{
+              height: 45,
+              borderColor: "rgba(208, 205, 221, 1)", // primary-50 (м'який сірий)
+              borderWidth: 0.5,
+              borderRadius: 8,
+              paddingHorizontal: 8,
+              backgroundColor: isDarkMode
+                ? "rgba(38, 38, 79, 1)"
+                : "rgba(244, 243, 249, 1)", // primary-900 (темний) / primary-100 (світлий)
             }}
-            validationSchema={validationSchema}
-            onSubmit={(values) => Alert.alert('Message', 'User details updated')}
-        >
-            {({handleChange, handleSubmit, values, setFieldValue, errors, touched}) => (
-                <ScrollView className="p-5">
-                    <Texts className="text-lg font-bold mb-4">User Information</Texts>
+            placeholderStyle={{
+              fontSize: 14,
+              color: isDarkMode
+                ? "rgba(196, 196, 196, 1)"
+                : "rgba(59, 60, 87, 1)", // dark (сірий) / primary-700 (темно-фіолетовий)
+            }}
+            selectedTextStyle={{
+              fontSize: 14,
+              color: isDarkMode
+                ? "rgba(244, 243, 249, 1)"
+                : "rgba(38, 38, 79, 1)", // primary-100 (білий) / primary-900 (темний)
+            }}
+            data={countries}
+            labelField="label"
+            valueField="value"
+            placeholder="Select a country"
+            value={values.country}
+            onChange={(item) => setFieldValue("country", item.value)}
+          />
 
-                    <FormField label="First Name" value={values.firstName} onChange={handleChange("firstName")}
-                               error={errors.firstName} touched={touched.firstName}/>
-                    <FormField label="Last Name" value={values.lastName} onChange={handleChange("lastName")}
-                               error={errors.lastName} touched={touched.lastName}/>
-                    <FormField label="City" value={values.city} onChange={handleChange("city")} error={errors.city}
-                               touched={touched.city}/>
-                    <FormField label="Address 1" value={values.address1} onChange={handleChange("address1")}
-                               error={errors.address1} touched={touched.address1}/>
-                    <FormField label="State/Region" value={values.state} onChange={handleChange("state")}
-                               error={errors.state} touched={touched.state}/>
-                    <FormField label="Zip Code" value={values.postcode} onChange={handleChange("postcode")}
-                               error={errors.postcode} touched={touched.postcode}/>
-                    <FormField label="Address 2" value={values.address2} onChange={handleChange("address2")}
-                               error={errors.address2} touched={touched.address2}/>
+          <Texts className="text-primary-700 dark:text-white mb-1 mt-3">
+            Payment Method
+          </Texts>
+          <Dropdown
+            style={{
+              height: 45,
+              borderColor: "rgba(208, 205, 221, 1)", // primary-50 (м'який сірий)
+              borderWidth: 0.5,
+              borderRadius: 8,
+              paddingHorizontal: 8,
+              backgroundColor: isDarkMode
+                ? "rgba(38, 38, 79, 1)"
+                : "rgba(244, 243, 249, 1)", // primary-900 (темний) / primary-100 (світлий)
+            }}
+            placeholderStyle={{
+              fontSize: 14,
+              color: isDarkMode
+                ? "rgba(196, 196, 196, 1)"
+                : "rgba(59, 60, 87, 1)", // dark (сірий) / primary-700 (темно-фіолетовий)
+            }}
+            selectedTextStyle={{
+              fontSize: 14,
+              color: isDarkMode
+                ? "rgba(244, 243, 249, 1)"
+                : "rgba(38, 38, 79, 1)", // primary-100 (білий) / primary-900 (темний)
+            }}
+            data={paymentMethods}
+            labelField="label"
+            valueField="value"
+            placeholder="Select a payment method"
+            value={values.paymentMethod}
+            onChange={(item) => setFieldValue("paymentMethod", item.value)}
+          />
 
-                    <Texts className="text-primary-700 dark:text-white mb-1">Country</Texts>
-                    <Dropdown
-                        style={{
-                            height: 45,
-                            borderColor: "#d0cddd",
-                            borderWidth: 0.5,
-                            borderRadius: 8,
-                            paddingHorizontal: 8
-                        }}
-                        placeholderStyle={{fontSize: 14}}
-                        selectedTextStyle={{fontSize: 14}}
-                        data={countries}
-                        labelField="label"
-                        valueField="value"
-                        placeholder="Select a country"
-                        value={values.country}
-                        onChange={(item) => setFieldValue("country", item.value)}
-                    />
+          <View className="flex-row justify-between items-center mt-4">
+            <Texts className="text-primary-700 dark:text-white">
+              Separate Invoices
+            </Texts>
+            <Switch
+              value={values.separateInvoices}
+              onValueChange={() =>
+                setFieldValue("separateInvoices", !values.separateInvoices)
+              }
+              circleSize={24}
+              barHeight={30}
+              backgroundActive={"rgba(76, 120, 253, 1)"}
+              backgroundInactive={"rgba(164, 159, 185, 1)"}
+              circleActiveColor={"rgba(130, 150, 255, 1)"}
+              circleInActiveColor={"rgba(38, 38, 79, 1)"}
+              renderInActiveText={false}
+              renderActiveText={false}
+            />
+          </View>
 
-                    <Texts className="text-primary-700 dark:text-white mb-1 mt-3">Payment Method</Texts>
-                    <Dropdown
-                        style={{
-                            height: 45,
-                            borderColor: "#d0cddd",
-                            borderWidth: 0.5,
-                            borderRadius: 8,
-                            paddingHorizontal: 8
-                        }}
-                        placeholderStyle={{fontSize: 14}}
-                        selectedTextStyle={{fontSize: 14}}
-                        data={paymentMethods}
-                        labelField="label"
-                        valueField="value"
-                        placeholder="Select a payment method"
-                        value={values.paymentMethod}
-                        onChange={(item) => setFieldValue("paymentMethod", item.value)}
-                    />
+          <View className="flex-row justify-between items-center mt-4">
+            <Texts className="text-primary-700 dark:text-white">
+              Business?
+            </Texts>
+            <Switch
+              value={values.isBusiness}
+              onValueChange={() =>
+                setFieldValue("isBusiness", !values.isBusiness)
+              }
+              circleSize={24}
+              barHeight={30}
+              backgroundActive={"rgba(76, 120, 253, 1)"}
+              backgroundInactive={"rgba(164, 159, 185, 1)"}
+              circleActiveColor={"rgba(130, 150, 255, 1)"}
+              circleInActiveColor={"rgba(38, 38, 79, 1)"}
+              renderInActiveText={false}
+              renderActiveText={false}
+            />
+          </View>
 
-                    <View className="flex-row justify-between items-center mt-4">
-                        <Texts className="text-primary-700 dark:text-white">Separate Invoices</Texts>
-                        <Switch
-                            value={values.separateInvoices}
-                            onValueChange={() => setFieldValue("separateInvoices", !values.separateInvoices)}
-                            circleSize={24}
-                            barHeight={30}
-                            circleBorderWidth={2}
-                            backgroundActive={"#D1D5DB"}
-                            backgroundInactive={"#D1D5DB"}
-                            circleActiveColor={"#4F46E5"}
-                            circleInActiveColor={"#374151"}
-                            renderActiveText={false}
-                            renderInActiveText={false}
-                        />
-                    </View>
-
-                    <View className="flex-row justify-between items-center mt-4">
-                        <Texts className="text-primary-700 dark:text-white">Business?</Texts>
-                        <Switch
-                            value={values.isBusiness}
-                            onValueChange={() => setFieldValue("isBusiness", !values.isBusiness)}
-                            circleSize={24}
-                            barHeight={30}
-                            circleBorderWidth={2}
-                            backgroundActive={"#D1D5DB"}
-                            backgroundInactive={"#D1D5DB"}
-                            circleActiveColor={"#4F46E5"}
-                            circleInActiveColor={"#374151"}
-                            renderActiveText={false}
-                            renderInActiveText={false}
-                        />
-                    </View>
-
-                    <TouchableOpacity onPress={() => handleSubmit()}
-                                      className="w-full mt-6  mb-4 p-4 bg-indigo rounded-lg shadow-md items-center">
-                        <Texts className="text-white text-lg">Save Changes</Texts>
-                    </TouchableOpacity>
-                </ScrollView>
-            )}
-        </Formik>
-    );
+          <TouchableOpacity
+            onPress={() => handleSubmit()}
+            className="w-full mt-6  mb-4 p-4 bg-indigo rounded-lg shadow-md items-center"
+          >
+            <Texts className="text-white text-lg">Save Changes</Texts>
+          </TouchableOpacity>
+        </ScrollView>
+      )}
+    </Formik>
+  );
 }

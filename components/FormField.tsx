@@ -1,10 +1,10 @@
-import {TextInput, View} from "react-native";
+import { TextInput, View } from "react-native";
 import Texts from "@/components/Texts";
 import React from "react";
 
 // @ts-ignore
 const FormField = ({ label, value, onChange, error, touched }) => (
-  <View className="mb-3">
+  <View className="mb-5">
     <Texts className="text-primary-700 dark:text-white mb-1">{label}</Texts>
     <TextInput
       value={value}
@@ -17,4 +17,4 @@ const FormField = ({ label, value, onChange, error, touched }) => (
   </View>
 );
 
-export default FormField
+export default FormField;

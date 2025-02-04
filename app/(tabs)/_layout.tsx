@@ -32,16 +32,16 @@ export default function TabLayout() {
           ),
         }}
       />
-        <Tabs.Screen
-            name="finance"
-            options={{
-                headerShown: true,
-                title: "Finance",
-                tabBarIcon: ({ color }) => (
-                    <FontAwesome size={28} name="dollar" color={color} />
-                ),
-            }}
-        />
+      <Tabs.Screen
+        name="finance"
+        options={{
+          headerShown: true,
+          title: "Finance",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="dollar" color={color} />
+          ),
+        }}
+      />
       <Tabs.Screen
         name="products"
         options={{

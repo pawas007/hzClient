@@ -1,9 +1,10 @@
 import React from "react";
-import { View, TouchableOpacity, ScrollView } from "react-native";
+import { View, TouchableOpacity, ScrollView, Button } from "react-native";
 // @ts-ignore
 import Icon from "react-native-vector-icons/FontAwesome";
 // @ts-ignore
 import Texts from "@/components/Texts";
+import {useToast} from "@/hooks/useToast";
 
 const notifications = [
   { title: "Announcements", icon: "bullhorn", count: 216 },
@@ -13,6 +14,7 @@ const notifications = [
 ];
 
 export default function HomeScreen() {
+   const { showToast } = useToast();
   return (
     <ScrollView>
       <View className="p-3">
@@ -32,13 +34,13 @@ export default function HomeScreen() {
             <View className="flex flex-row justify-center mt-4">
               <TouchableOpacity
                 className="flex-1 p-4 bg-blue-500 dark:bg-primary-dark rounded-lg mr-2"
-                onPress={() => alert("Go to Pay")}
+             onPress={() => showToast("success", "This is a success message!")}
               >
                 <Texts className="text-center text-white">Pay</Texts>
               </TouchableOpacity>
               <TouchableOpacity
                 className="flex-1 p-4 bg-blue-500 dark:bg-primary-dark rounded-lg mr-2"
-                onPress={() => alert("Add Funds")}
+                onPress={() => showToast("success", "This is a success message!")}
               >
                 <Texts className="text-center text-blue-500 dark:text-white">
                   Add Funds

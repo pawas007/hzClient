@@ -25,7 +25,6 @@ export default function HomeScreen() {
               €0.00 Euro
             </Texts>
             <Texts className="text-md  ">Balance</Texts>
-
             <View className="flex flex-row justify-center mt-4">
               <TouchableOpacity
                 className="flex-1 p-4 bg-blue-500 dark:bg-primary-dark rounded-lg mr-2"
@@ -46,7 +45,6 @@ export default function HomeScreen() {
             </View>
           </View>
         </View>
-
         <Texts className="text-black  text-lg font-medium my-4">
           Notification Board
         </Texts>
@@ -62,16 +60,12 @@ export default function HomeScreen() {
             <Texts className="  text-lg">{notification.count}</Texts>
           </View>
         ))}
-
         <View className="mt-6">
           <View className="text-center mt-4">
             <Texts className="text-lg text-gray-600  font-normal">
               Tickets require your attention
             </Texts>
-            <TouchableOpacity
-              className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md mt-4"
-              onPress={() => alert("Navigate to tickets")}
-            >
+            <TouchableOpacity className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md mt-4">
               <View className="flex items-center">
                 <Icon name="ticket" size={30} color="#4b8dff" />
                 <Texts className="text-center text-lg  mt-2 ">2</Texts>
@@ -81,10 +75,7 @@ export default function HomeScreen() {
 
           <View className="grid grid-cols-2 gap-4 mt-6">
             <View className="text-right">
-              <TouchableOpacity
-                className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md"
-                onPress={() => alert("Submit a ticket")}
-              >
+              <TouchableOpacity className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md">
                 <View className="flex items-center">
                   <Icon name="plus" size={30} color="#4b8dff" />
                   <Texts className="text-center text-lg  mt-2 ">
@@ -94,10 +85,7 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </View>
             <View className="text-left">
-              <TouchableOpacity
-                className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md"
-                onPress={() => alert("Start live chat")}
-              >
+              <TouchableOpacity className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md">
                 <View className="flex items-center">
                   <Icon name="comments" size={30} color="#4b8dff" />
                   <Texts className="text-center text-lg  mt-2 ">
@@ -107,12 +95,8 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </View>
           </View>
-
           <View className="text-center mt-5">
-            <TouchableOpacity
-              className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md"
-              onPress={() => alert("Navigate to knowledge base")}
-            >
+            <TouchableOpacity className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-md">
               <View className="flex items-center">
                 <Icon name="info-circle" size={30} color="#4b8dff" />
                 <Texts className="text-center text-lg  mt-2 ">

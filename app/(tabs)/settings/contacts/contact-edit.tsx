@@ -5,6 +5,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import Texts from "@/components/Texts";
 import FormField from "@/components/FormField";
+import { useToast } from "@/hooks/useToast";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
@@ -23,9 +24,9 @@ export default function ContactEditScreen() {
   const navigation = useNavigation();
   const route = useRoute();
   const { contact } = route.params as { contact: any };
-
+  const { showToast } = useToast();
   const handleSubmit = (values: any) => {
-    Alert.alert("Success", "Contact updated successfully");
+    showToast("success", "Contact updated successfully");
     navigation.goBack();
   };
 

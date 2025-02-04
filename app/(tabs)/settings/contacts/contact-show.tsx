@@ -18,7 +18,6 @@ export default function ContactViewScreen() {
           <Ionicons name="close" size={24} color="#d0cddd" />
         </TouchableOpacity>
       </View>
-
       <View className="bg-gray-100 p-4 rounded-lg shadow-md">
         <Texts className="  mb-2">
           <Texts className="font-bold">First Name:</Texts> {contact.firstName}

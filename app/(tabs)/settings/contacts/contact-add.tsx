@@ -5,7 +5,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import Texts from "@/components/Texts";
 import FormField from "@/components/FormField";
-import { Ionicons } from "@expo/vector-icons";
+import { useToast } from "@/hooks/useToast";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
@@ -23,12 +23,12 @@ const validationSchema = Yup.object().shape({
 export default function ContactAddScreen() {
   const navigation = useNavigation();
   const [contacts, setContacts] = useState([]);
-
+  const { showToast } = useToast();
   const handleSubmit = (values: any) => {
     const newContact = { id: Date.now(), ...values };
     // @ts-ignore
     setContacts([...contacts, newContact]);
-    Alert.alert("Success", "Contact added successfully");
+    showToast("success", "Contact added successfully");
     navigation.goBack();
   };
 

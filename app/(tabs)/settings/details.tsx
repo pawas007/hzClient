@@ -8,6 +8,7 @@ import { TouchableOpacity } from "react-native";
 import { Switch } from "react-native-switch";
 import FormField from "@/components/FormField";
 import { useColorScheme } from "react-native";
+import { useToast } from "@/hooks/useToast";
 
 const countries = [
   { label: "Ukraine (Україна)", value: "ua" },
@@ -44,6 +45,7 @@ const validationSchema = Yup.object().shape({
 
 export default function UserInfoForm() {
   const isDarkMode = useColorScheme() === "dark";
+  const { showToast } = useToast();
   return (
     <Formik
       initialValues={{
@@ -60,7 +62,9 @@ export default function UserInfoForm() {
         isBusiness: false,
       }}
       validationSchema={validationSchema}
-      onSubmit={(values) => Alert.alert("Message", "User details updated")}
+      onSubmit={(values) => {
+        showToast("success", "User details updated");
+      }}
     >
       {({
         handleChange,
@@ -120,7 +124,6 @@ export default function UserInfoForm() {
             error={errors.address2}
             touched={touched.address2}
           />
-
           <Texts className="  mb-1">Country</Texts>
           <Dropdown
             style={{
@@ -152,7 +155,6 @@ export default function UserInfoForm() {
             value={values.country}
             onChange={(item) => setFieldValue("country", item.value)}
           />
-
           <Texts className="  mb-1 mt-3">Payment Method</Texts>
           <Dropdown
             style={{
@@ -184,7 +186,6 @@ export default function UserInfoForm() {
             value={values.paymentMethod}
             onChange={(item) => setFieldValue("paymentMethod", item.value)}
           />
-
           <View className="flex-row justify-between items-center mt-4">
             <Texts className=" ">Separate Invoices</Texts>
             <Switch

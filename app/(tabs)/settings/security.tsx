@@ -5,8 +5,8 @@ import * as Yup from "yup";
 import Texts from "@/components/Texts";
 import FormField from "@/components/FormField";
 import { useColorScheme } from "react-native";
+import { useToast } from "@/hooks/useToast";
 
-// Валідація форми
 const validationSchema = Yup.object().shape({
   newPassword: Yup.string().required("New Password is required"),
   confirmPassword: Yup.string()
@@ -19,20 +19,19 @@ const validationSchema = Yup.object().shape({
 });
 
 export default function SecuritySettings() {
-  const isDarkMode = useColorScheme() === "dark";
   const [apiKey, setApiKey] = useState("");
-
+  const { showToast } = useToast();
   const handleGenerateApiKey = () => {
     const newKey = Math.random().toString(36).substring(2, 18).toUpperCase();
     setApiKey(newKey);
-    Alert.alert("API Key", `New API Key: ${newKey}`);
+    showToast("success", `New API Key: ${newKey}`);
   };
 
   return (
     <Formik
       initialValues={{ newPassword: "", confirmPassword: "", ipAddress: "" }}
       validationSchema={validationSchema}
-      onSubmit={(values) => Alert.alert("Message", "Security settings updated")}
+      onSubmit={(values) => showToast("success", "Security settings updated")}
     >
       {({ handleChange, handleSubmit, values, errors, touched }) => (
         <ScrollView className="p-5">
@@ -43,7 +42,6 @@ export default function SecuritySettings() {
             error={errors.newPassword}
             touched={touched.newPassword}
           />
-
           <FormField
             label="Confirm New Password"
             value={values.confirmPassword}
@@ -77,7 +75,7 @@ export default function SecuritySettings() {
               touched={touched.ipAddress}
             />
             <TouchableOpacity
-              onPress={() => Alert.alert("IP List", "IP added successfully")}
+              onPress={() => showToast("success", "IP added successfully")}
               className="w-full p-4 bg-indigo rounded-lg shadow-md items-center"
             >
               <Texts className=" text-lg">Add More</Texts>
@@ -93,7 +91,7 @@ export default function SecuritySettings() {
             </View>
             <TouchableOpacity
               onPress={() =>
-                Alert.alert("2FA", "Enabling Two-Factor Authentication...")
+                showToast("success", "Enabling Two-Factor Authentication...")
               }
               className="w-full mt-3 p-4 bg-indigo rounded-lg shadow-md items-center"
             >

@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import Texts from "@/components/Texts";
 import FormField from "@/components/FormField";
 import { useColorScheme } from "react-native";
+import { useToast } from "@/hooks/useToast";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
@@ -12,7 +13,7 @@ const validationSchema = Yup.object().shape({
 
 export default function UserManagement() {
   const isDarkMode = useColorScheme() === "dark";
-
+  const { showToast } = useToast();
   const [users, setUsers] = useState([
     {
       id: 1,
@@ -23,7 +24,7 @@ export default function UserManagement() {
   ]);
   // @ts-ignore
   const handleInvite = (values, { resetForm }) => {
-    Alert.alert("Success", `Invitation sent to ${values.email}`);
+    showToast("success", `Invitation sent to ${values.email}`);
     resetForm();
   };
 

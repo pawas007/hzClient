@@ -6,6 +6,7 @@ import { Switch } from "react-native-switch";
 import Texts from "@/components/Texts";
 import FormField from "@/components/FormField";
 import { useColorScheme } from "react-native";
+import { useToast } from "@/hooks/useToast";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
@@ -15,8 +16,7 @@ const validationSchema = Yup.object().shape({
 });
 
 export default function NotificationsSettings() {
-  const isDarkMode = useColorScheme() === "dark";
-
+  const { showToast } = useToast();
   return (
     <Formik
       initialValues={{
@@ -28,7 +28,7 @@ export default function NotificationsSettings() {
       }}
       validationSchema={validationSchema}
       onSubmit={(values) =>
-        Alert.alert("Message", "Notification settings updated")
+        showToast("success", "Notification settings updated")
       }
     >
       {({
@@ -48,7 +48,6 @@ export default function NotificationsSettings() {
             error={errors.email}
             touched={touched.email}
           />
-
           <FormField
             label="CC Ticket Replies"
             value={values.ccTicketReplies}
@@ -56,7 +55,6 @@ export default function NotificationsSettings() {
             error={errors.ccTicketReplies}
             touched={touched.ccTicketReplies}
           />
-
           <FormField
             label="Skype"
             value={values.skype}
@@ -64,7 +62,6 @@ export default function NotificationsSettings() {
             error={errors.skype}
             touched={touched.skype}
           />
-
           <FormField
             label="IM/Jabber"
             value={values.imJabber}
@@ -72,7 +69,6 @@ export default function NotificationsSettings() {
             error={errors.imJabber}
             touched={touched.imJabber}
           />
-
           <View className="flex-row justify-between items-center mt-6">
             <Texts className=" ">Newsletter Opt-out</Texts>
             <Switch
@@ -91,9 +87,7 @@ export default function NotificationsSettings() {
             />
           </View>
           <TouchableOpacity
-            onPress={() =>
-              Alert.alert("Telegram", "Activating Telegram Bot...")
-            }
+            onPress={() => showToast("success", "Activating Telegram Bot...")}
             className="w-full mt-6 p-4 bg-indigo rounded-lg shadow-md items-center"
           >
             <Texts className=" text-lg">Activate Telegram</Texts>

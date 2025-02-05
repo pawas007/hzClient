@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { View, TouchableOpacity, ScrollView, Button } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Texts from "@/components/Texts";
 import { useToast } from "@/hooks/useToast";
+import * as Notifications from "expo-notifications";
+import { registerForPushNotificationsAsync, sendLocalNotification } from "@/utils/notifications";
 
 const notifications = [
   { title: "Announcements", icon: "bullhorn", count: 216 },
@@ -13,6 +15,10 @@ const notifications = [
 
 export default function HomeScreen() {
   const { showToast } = useToast();
+      useEffect(() => {
+        registerForPushNotificationsAsync().then(r => console.log('Push notification registered'));
+    }, []);
+
   return (
     <ScrollView>
       <View className="p-3">
@@ -27,7 +33,7 @@ export default function HomeScreen() {
               <TouchableOpacity
                 className="flex-1 p-4 bg-blue-500 dark:bg-primary-dark rounded-lg mr-2"
                 onPress={() =>
-                  showToast("success", "This is a success message!")
+                 sendLocalNotification("📩 New invoice!", "You got a new invoice #5466g.")
                 }
               >
                 <Texts className="text-center ">Pay</Texts>

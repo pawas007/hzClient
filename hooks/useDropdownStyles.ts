@@ -6,7 +6,7 @@ export const useDropdownStyles = () => {
 
   return {
     style: {
-      marginBottom:5,
+      marginBottom: 5,
       height: 45,
       borderColor: "rgba(208, 205, 221, 1)",
       borderWidth: 0.5,

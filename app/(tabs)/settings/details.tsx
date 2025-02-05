@@ -25,7 +25,7 @@ const validationSchema = Yup.object().shape({
 });
 
 export default function UserInfoForm() {
-    const { showToast } = useToast();
+  const { showToast } = useToast();
   const dropdownStyles = useDropdownStyles();
   const countries = useGlobalStore((state) => state.countries);
   const paymentMethods = useGlobalStore((state) => state.paymentMethods);

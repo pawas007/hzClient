@@ -18,8 +18,18 @@ export interface CartProduct {
 
 export interface CartStore {
   products: CartProduct[];
-  addProduct: (product: Omit<CartProduct, "quantity" | "configurations" | "additionalPrices">) => void;
-  updateProduct: (id: number, field: string, value: string, price: number) => void;
+  addProduct: (
+    product: Omit<
+      CartProduct,
+      "quantity" | "configurations" | "additionalPrices"
+    >,
+  ) => void;
+  updateProduct: (
+    id: number,
+    field: string,
+    value: string,
+    price: number,
+  ) => void;
   updateQuantity: (id: number, quantity: number) => void;
   removeProduct: (id: number) => void;
   getTotalQuantity: () => number;

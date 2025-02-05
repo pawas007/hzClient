@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import {CartStore} from "@/types/products";
+import { CartStore } from "@/types/products";
 
 export const useCartStore = create<CartStore>((set, get) => ({
   products: [],
@@ -11,7 +11,7 @@ export const useCartStore = create<CartStore>((set, get) => ({
       if (existingProduct) {
         return {
           products: state.products.map((p) =>
-            p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
+            p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p,
           ),
         };
       } else {
@@ -53,19 +53,21 @@ export const useCartStore = create<CartStore>((set, get) => ({
                 [field]: price,
               },
             }
-          : product
+          : product,
       ),
     })),
 
   updateQuantity: (id, quantity) =>
     set((state) => {
       if (quantity < 1) {
-        return { products: state.products.filter((product) => product.id !== id) };
+        return {
+          products: state.products.filter((product) => product.id !== id),
+        };
       }
 
       return {
         products: state.products.map((product) =>
-          product.id === id ? { ...product, quantity } : product
+          product.id === id ? { ...product, quantity } : product,
         ),
       };
     }),
@@ -76,13 +78,19 @@ export const useCartStore = create<CartStore>((set, get) => ({
     })),
 
   getTotalQuantity: () => {
-    return get().products.reduce((total, product) => total + product.quantity, 0);
+    return get().products.reduce(
+      (total, product) => total + product.quantity,
+      0,
+    );
   },
 
   getTotalPrice: () => {
     return get().products.reduce((total, product) => {
       const basePrice = product.price?.eur || 0;
-      const configPrice = Object.values(product.additionalPrices || {}).reduce((a, b) => a + (b || 0), 0);
+      const configPrice = Object.values(product.additionalPrices || {}).reduce(
+        (a, b) => a + (b || 0),
+        0,
+      );
       return total + (basePrice + configPrice) * product.quantity;
     }, 0);
   },

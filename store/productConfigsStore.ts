@@ -16,17 +16,34 @@ export const useProductConfigsStore = create<ProductConfigsStore>(() => ({
   ],
 
   operatingSystems: [
-    "AlmaLinux 8", "AlmaLinux 9", "Rocky Linux 8", "Rocky Linux 9",
-    "CentOS 7 EOL", "CentOS 9 Stream", "Ubuntu 18 LTS", "Ubuntu 20 LTS",
-    "Debian 10", "Debian 11", "Debian 12", "FreeBSD 13", "FreeBSD 14",
-    "Proxmox VE 7", "Proxmox VE 8", "ESXi (VMware)", "Other (contact sales)",
+    "AlmaLinux 8",
+    "AlmaLinux 9",
+    "Rocky Linux 8",
+    "Rocky Linux 9",
+    "CentOS 7 EOL",
+    "CentOS 9 Stream",
+    "Ubuntu 18 LTS",
+    "Ubuntu 20 LTS",
+    "Debian 10",
+    "Debian 11",
+    "Debian 12",
+    "FreeBSD 13",
+    "FreeBSD 14",
+    "Proxmox VE 7",
+    "Proxmox VE 8",
+    "ESXi (VMware)",
+    "Other (contact sales)",
   ].map((os) => ({ label: os, value: os })),
 
   raidSetups: [
     { label: "JBOD (no RAID) (€0)", value: "JBOD", price: 0 },
     { label: "Software RAID0 (Stripe) (€10)", value: "RAID0", price: 10 },
     { label: "Software RAID1 (Mirror) (€15)", value: "RAID1", price: 15 },
-    { label: "Hardware RAID1 (needs adapter) (€30)", value: "HARD_RAID1", price: 30 },
+    {
+      label: "Hardware RAID1 (needs adapter) (€30)",
+      value: "HARD_RAID1",
+      price: 30,
+    },
   ],
 
   volumes: [

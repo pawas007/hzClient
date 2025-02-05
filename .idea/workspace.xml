@@ -4,34 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6733cdf3-26de-48a5-9e6d-154f923290d9" name="Changes" comment="Refactor alerts">
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/cart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/cartStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/globalStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/productsStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/contacts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/forms.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/stores.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/users.ts" afterDir="false" />
+    <list default="true" id="6733cdf3-26de-48a5-9e6d-154f923290d9" name="Changes" comment="Add card">
+      <change afterPath="$PROJECT_DIR$/hooks/useDropdownStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/products.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/finance/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/finance/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/products/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-add.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-show.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/contact-show.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/contacts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/contacts/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/notifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/notifications.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/security.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/security.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FormField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Texts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Texts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/cartStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/cartStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/productsStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/productsStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/stores.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/stores.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +106,7 @@
       <workItem from="1737999211713" duration="5703000" />
       <workItem from="1738005835796" duration="570000" />
       <workItem from="1738006454442" duration="1268000" />
-      <workItem from="1738661760476" duration="24707000" />
+      <workItem from="1738661760476" duration="26002000" />
     </task>
     <task id="LOCAL-00001" summary="Add new page">
       <option name="closed" value="true" />
@@ -191,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738696830599</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add card">
+      <option name="closed" value="true" />
+      <created>1738715727018</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738715727019</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +191,7 @@
     <MESSAGE value="Finish settings" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Refactor alerts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor alerts" />
+    <MESSAGE value="Add card" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add card" />
   </component>
 </project>

@@ -3,9 +3,12 @@ import { View, TouchableOpacity } from "react-native";
 import { useRoute, useNavigation, RouteProp } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import Texts from "@/components/Texts";
-import {ContactParams} from "@/types/contacts";
+import { ContactParams } from "@/types/contacts";
 
-type ContactRouteProp = RouteProp<{ ContactViewScreen: ContactParams }, "ContactViewScreen">;
+type ContactRouteProp = RouteProp<
+  { ContactViewScreen: ContactParams },
+  "ContactViewScreen"
+>;
 
 export default function ContactViewScreen() {
   const route = useRoute<ContactRouteProp>();
@@ -31,7 +34,8 @@ export default function ContactViewScreen() {
           <Texts className="font-bold">Email:</Texts> {contact.email}
         </Texts>
         <Texts className="mb-2">
-          <Texts className="font-bold">Phone Number:</Texts> {contact.phoneNumber}
+          <Texts className="font-bold">Phone Number:</Texts>{" "}
+          {contact.phoneNumber}
         </Texts>
         <Texts className="mb-2">
           <Texts className="font-bold">Country:</Texts> {contact.country}

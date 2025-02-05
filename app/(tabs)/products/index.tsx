@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useColorScheme } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Texts from "@/components/Texts";
-import {useRouter} from "expo-router";
+import { useRouter } from "expo-router";
 
 const products = [
   { name: "DS", screen: "/products/vps", icon: "server" },
@@ -20,11 +20,10 @@ const products = [
 const ProductsGrid = () => {
   const navigation = useNavigation();
   const colorScheme = useColorScheme();
-    const router = useRouter();
+  const router = useRouter();
   const handleNavigation = (screen: string) => {
     router.push(screen as any);
   };
-
 
   return (
     <View className="p-3 h-full">
@@ -35,7 +34,10 @@ const ProductsGrid = () => {
         contentContainerClassName="gap-4"
         columnWrapperStyle={{ gap: 8, justifyContent: "space-between" }}
         renderItem={({ item }) => (
-          <TouchableOpacity   onPress={() => handleNavigation(item.screen)} className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-sm">
+          <TouchableOpacity
+            onPress={() => handleNavigation(item.screen)}
+            className="flex-1 p-4 rounded-lg dark:bg-primary-900 bg-primary-100 shadow-sm"
+          >
             <View className="flex items-center">
               <Icon name={item.icon} size={30} color="#4b8dff" />
               <Texts className="text-center text-lg   mt-2 ">{item.name}</Texts>

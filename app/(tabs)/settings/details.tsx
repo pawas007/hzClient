@@ -9,9 +9,8 @@ import { Switch } from "react-native-switch";
 import FormField from "@/components/FormField";
 import { useColorScheme } from "react-native";
 import { useToast } from "@/hooks/useToast";
-import {useGlobalStore} from "@/store/globalStore";
-
-
+import { useGlobalStore } from "@/store/globalStore";
+import { useDropdownStyles } from "@/hooks/useDropdownStyles";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
@@ -28,6 +27,7 @@ const validationSchema = Yup.object().shape({
 export default function UserInfoForm() {
   const isDarkMode = useColorScheme() === "dark";
   const { showToast } = useToast();
+  const dropdownStyles = useDropdownStyles();
   const countries = useGlobalStore((state) => state.countries);
   const paymentMethods = useGlobalStore((state) => state.paymentMethods);
   return (
@@ -110,28 +110,7 @@ export default function UserInfoForm() {
           />
           <Texts className="  mb-1">Country</Texts>
           <Dropdown
-            style={{
-              height: 45,
-              borderColor: "rgba(208, 205, 221, 1)",
-              borderWidth: 0.5,
-              borderRadius: 8,
-              paddingHorizontal: 8,
-                     backgroundColor: isDarkMode
-                ? "rgba(25, 25, 53, 1)"
-                : "rgba(244, 243, 249, 1)",
-            }}
-            placeholderStyle={{
-              fontSize: 14,
-              color: isDarkMode
-                ? "rgba(196, 196, 196, 1)"
-                : "rgba(25, 25, 53, 1)",
-            }}
-            selectedTextStyle={{
-              fontSize: 14,
-              color: isDarkMode
-                ? "rgba(244, 243, 249, 1)"
-                : "rgba(25, 25, 53, 1)",
-            }}
+            {...dropdownStyles}
             data={countries}
             labelField="label"
             valueField="value"
@@ -141,28 +120,7 @@ export default function UserInfoForm() {
           />
           <Texts className="  mb-1 mt-3">Payment Method</Texts>
           <Dropdown
-            style={{
-              height: 45,
-              borderColor: "rgba(208, 205, 221, 1)",
-              borderWidth: 0.5,
-              borderRadius: 8,
-              paddingHorizontal: 8,
-              backgroundColor: isDarkMode
-                ? "rgba(25, 25, 53, 1)"
-                : "rgba(244, 243, 249, 1)",
-            }}
-            placeholderStyle={{
-              fontSize: 14,
-              color: isDarkMode
-                ? "rgba(196, 196, 196, 1)"
-                : "rgba(25, 25, 53, 1)",
-            }}
-            selectedTextStyle={{
-              fontSize: 14,
-              color: isDarkMode
-                ? "rgba(244, 243, 249, 1)"
-                : "rgba(25, 25, 53, 1)",
-            }}
+            {...dropdownStyles}
             data={paymentMethods}
             labelField="label"
             valueField="value"

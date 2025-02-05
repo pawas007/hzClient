@@ -39,7 +39,7 @@ export default function NotificationsSettings() {
         touched,
       }) => (
         <ScrollView className="p-5">
-            <FormField
+          <FormField
             label="Email"
             value={values.email}
             onChange={handleChange("email")}

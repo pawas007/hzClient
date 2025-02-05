@@ -9,7 +9,7 @@ interface TextsProps extends TextProps {
 
 const Texts: React.FC<TextsProps> = ({ className, style, ...props }) => {
   const { colorScheme } = useTheme();
-  const textColor = colorScheme === "light" ? "text-red" : "text-white";
+  const textColor = colorScheme === "light" ? "text-primary" : "text-white";
   return (
     <Text
       {...props}

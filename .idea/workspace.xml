@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6733cdf3-26de-48a5-9e6d-154f923290d9" name="Changes" comment="Add card">
-      <change afterPath="$PROJECT_DIR$/hooks/useDropdownStyles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/products.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings/details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings/details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/cartStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/cartStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/productsStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/productsStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/stores.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/stores.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/sign-in.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Texts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Texts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +29,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "jsx.switch.disabled": "true",
-    "last_opened_file_path": "/Users/mac/projects/hzClient/store",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/Users/mac/projects/hzClient/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mac/projects/hzClient/store&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/mac/projects/hzClient/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/store" />
@@ -107,6 +102,7 @@
       <workItem from="1738005835796" duration="570000" />
       <workItem from="1738006454442" duration="1268000" />
       <workItem from="1738661760476" duration="26002000" />
+      <workItem from="1738762015461" duration="4440000" />
     </task>
     <task id="LOCAL-00001" summary="Add new page">
       <option name="closed" value="true" />
@@ -180,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738715727019</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add card">
+      <option name="closed" value="true" />
+      <created>1738765996184</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738765996184</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

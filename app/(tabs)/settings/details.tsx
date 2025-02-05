@@ -7,7 +7,6 @@ import Texts from "@/components/Texts";
 import { TouchableOpacity } from "react-native";
 import { Switch } from "react-native-switch";
 import FormField from "@/components/FormField";
-import { useColorScheme } from "react-native";
 import { useToast } from "@/hooks/useToast";
 import { useGlobalStore } from "@/store/globalStore";
 import { useDropdownStyles } from "@/hooks/useDropdownStyles";

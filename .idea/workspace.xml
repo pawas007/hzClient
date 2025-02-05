@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6733cdf3-26de-48a5-9e6d-154f923290d9" name="Changes" comment="Add card">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/cart/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/cart/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/cart/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/cart/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/cart/order.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/cart/order.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/products/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/products/vps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/cartStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/cartStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/globalStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/globalStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/products.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/products.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +109,7 @@
       <workItem from="1738005835796" duration="570000" />
       <workItem from="1738006454442" duration="1268000" />
       <workItem from="1738661760476" duration="26002000" />
-      <workItem from="1738762015461" duration="4549000" />
+      <workItem from="1738762015461" duration="11014000" />
     </task>
     <task id="LOCAL-00001" summary="Add new page">
       <option name="closed" value="true" />
@@ -192,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738767075032</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add card">
+      <option name="closed" value="true" />
+      <created>1738767234946</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738767234946</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

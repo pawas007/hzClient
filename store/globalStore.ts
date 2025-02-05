@@ -14,11 +14,19 @@ export const useGlobalStore = create<GlobalStore>(() => ({
     { label: "Netherlands", value: "nl" },
     { label: "Sweden", value: "se" },
   ],
+
   paymentMethods: [
-    { label: "Bank Transfer", value: "banktransfer" },
-    { label: "Paxum", value: "paxum" },
-    { label: "PayPal", value: "paypal" },
-    { label: "Stripe (Credit Cards)", value: "stripe" },
-    { label: "CoinGate (Crypto)", value: "coingate" },
+    { label: "Bank Transfer", value: "banktransfer", icon: "banktransfer" },
+    { label: "Paxum", value: "paxum", icon: "paxum" },
+    { label: "PayPal", value: "paypal", icon: "paypal" },
+    { label: "Stripe (Credit Cards)", value: "stripe", icon: "stripe" },
+    { label: "CoinGate (Crypto)", value: "coingate", icon: "coingate" },
+    {
+      label: "CoinPayments (Crypto)",
+      value: "coinpayments",
+      icon: "coinpayments",
+    },
+    { label: "Google Pay", value: "googlepay", icon: "googlepay" },
+    { label: "Apple Pay", value: "applepay", icon: "applepay" },
   ],
 }));

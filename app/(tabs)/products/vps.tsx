@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  View,
-  TextInput,
-  ScrollView,
-  TouchableOpacity,
-  useColorScheme,
-} from "react-native";
+import { View, TextInput, ScrollView, TouchableOpacity } from "react-native";
 import { useProductsStore } from "@/store/productsStore";
 import { useCartStore } from "@/store/cartStore";
 import Texts from "@/components/Texts";

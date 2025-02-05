@@ -34,6 +34,7 @@ export interface CartStore {
   removeProduct: (id: number) => void;
   getTotalQuantity: () => number;
   getTotalPrice: () => number;
+  clearCart: () => void;
 }
 
 export interface Product {

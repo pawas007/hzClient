@@ -6,9 +6,9 @@ export default function vpsLayout() {
     <Stack>
       <Stack.Screen
         name="index"
-        options={{ headerShown: false, title: "Cart" }}
+        options={{ headerShown: true, title: "Cart" }}
       />
-      {/*<Stack.Screen name="vps" options={{ title: "Vps" }} />*/}
+      <Stack.Screen name="order" options={{ title: "Order" }} />
     </Stack>
   );
 }

@@ -1,7 +1,5 @@
 import React from "react";
 import { View, TouchableOpacity, FlatList } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { useColorScheme } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Texts from "@/components/Texts";
 import { useRouter } from "expo-router";
@@ -18,8 +16,6 @@ const products = [
 ];
 
 const ProductsGrid = () => {
-  const navigation = useNavigation();
-  const colorScheme = useColorScheme();
   const router = useRouter();
   const handleNavigation = (screen: string) => {
     router.push(screen as any);

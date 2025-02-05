@@ -2,8 +2,22 @@ import { create } from "zustand";
 import { CartStore } from "@/types/products";
 
 export const useCartStore = create<CartStore>((set, get) => ({
-  products: [],
-
+  products: [
+    {
+      additionalPrices: { billingCycle: 0, raid: 15, volume: 0 },
+      configurations: {
+        billingCycle: "Monthly",
+        os: "Rocky Linux 9",
+        raid: "Software RAID1 (Mirror)",
+        volume: "10TB",
+      },
+      country: "Germany",
+      id: 1,
+      name: "2 Xeon Cores, 512MB RAM, 10GB SSD",
+      price: { eur: 4.2, gbp: 3.8, usd: 4.5 },
+      quantity: 2,
+    },
+  ],
   addProduct: (product) =>
     set((state) => {
       const existingProduct = state.products.find((p) => p.id === product.id);
@@ -29,8 +43,8 @@ export const useCartStore = create<CartStore>((set, get) => ({
               },
               additionalPrices: {
                 billingCycle: 0,
-                raid: 15, // RAID1
-                volume: 0, // 10TB безкоштовно
+                raid: 15,
+                volume: 0,
               },
             },
           ],
@@ -59,6 +73,7 @@ export const useCartStore = create<CartStore>((set, get) => ({
 
   updateQuantity: (id, quantity) =>
     set((state) => {
+      console.log(state.products);
       if (quantity < 1) {
         return {
           products: state.products.filter((product) => product.id !== id),
@@ -94,4 +109,8 @@ export const useCartStore = create<CartStore>((set, get) => ({
       return total + (basePrice + configPrice) * product.quantity;
     }, 0);
   },
+  clearCart: () =>
+    set(() => ({
+      products: [],
+    })),
 }));

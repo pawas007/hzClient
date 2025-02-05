@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, ScrollView, TouchableOpacity } from "react-native";
 import { useCartStore } from "@/store/cartStore";
-
+import { useRouter } from "expo-router";
 import Texts from "@/components/Texts";
 import { Dropdown } from "react-native-element-dropdown";
 import { useProductConfigsStore } from "@/store/productConfigsStore";
@@ -11,7 +11,6 @@ export default function CartScreen() {
   const {
     products,
     getTotalPrice,
-    getTotalQuantity,
     removeProduct,
     updateProduct,
     updateQuantity,
@@ -20,6 +19,7 @@ export default function CartScreen() {
     useProductConfigsStore();
   const [expandedProduct, setExpandedProduct] = useState<number | null>(null);
   const dropdownStyles = useDropdownStyles();
+  const router = useRouter();
   return (
     <View className="flex-1 p-3">
       {products.length === 0 ? (
@@ -163,7 +163,10 @@ export default function CartScreen() {
             </Texts>
           </View>
 
-          <TouchableOpacity className="w-full mt-1  mb-1 p-4 bg-indigo rounded-lg shadow-md items-center">
+          <TouchableOpacity
+            onPress={() => router.push("/cart/order")}
+            className="w-full mt-1  mb-1 p-4 bg-indigo rounded-lg shadow-md items-center"
+          >
             <Texts className="text-white text-center">Make Order</Texts>
           </TouchableOpacity>
         </>

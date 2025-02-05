@@ -1,9 +1,7 @@
 import React from "react";
 import { View, TouchableOpacity, ScrollView } from "react-native";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
-// @ts-ignore
 import Icon from "react-native-vector-icons/FontAwesome";
-// @ts-ignore
 import Texts from "@/components/Texts";
 import { useRouter } from "expo-router";
 

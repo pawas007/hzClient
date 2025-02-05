@@ -1,8 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, ScrollView, Button } from "react-native";
-// @ts-ignore
 import Icon from "react-native-vector-icons/FontAwesome";
-// @ts-ignore
 import Texts from "@/components/Texts";
 import { useToast } from "@/hooks/useToast";
 
@@ -20,8 +18,8 @@ export default function HomeScreen() {
       <View className="p-3">
         <View>
           <View className="bg-white dark:bg-primary-900 p-4 rounded-lg shadow-md">
-            <Texts className="uppercase text-xl mb-2">Finance</Texts>
-            <Texts className="text-xl text-black  font-normal">
+            <Texts className="uppercase text-xl mb-1">Finance</Texts>
+            <Texts className="text-xl text-black  font-normal mb-2">
               €0.00 Euro
             </Texts>
             <Texts className="text-md  ">Balance</Texts>

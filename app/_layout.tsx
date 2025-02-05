@@ -32,7 +32,7 @@ export default function RootLayout() {
 
   return (
     <ToastProvider
-      placement="bottom"
+      placement="top"
       duration={2000}
       animationType="slide-in"
       animationDuration={250}

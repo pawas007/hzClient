@@ -5,7 +5,6 @@ import * as Yup from "yup";
 import { Switch } from "react-native-switch";
 import Texts from "@/components/Texts";
 import FormField from "@/components/FormField";
-import { useColorScheme } from "react-native";
 import { useToast } from "@/hooks/useToast";
 
 const validationSchema = Yup.object().shape({
@@ -40,8 +39,7 @@ export default function NotificationsSettings() {
         touched,
       }) => (
         <ScrollView className="p-5">
-          {/* Email */}
-          <FormField
+            <FormField
             label="Email"
             value={values.email}
             onChange={handleChange("email")}

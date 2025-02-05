@@ -9,27 +9,9 @@ import { Switch } from "react-native-switch";
 import FormField from "@/components/FormField";
 import { useColorScheme } from "react-native";
 import { useToast } from "@/hooks/useToast";
+import {useGlobalStore} from "@/store/globalStore";
 
-const countries = [
-  { label: "Ukraine (Україна)", value: "ua" },
-  { label: "United States", value: "us" },
-  { label: "Canada", value: "ca" },
-  { label: "Germany", value: "de" },
-  { label: "France", value: "fr" },
-  { label: "United Kingdom", value: "gb" },
-  { label: "Italy", value: "it" },
-  { label: "Spain", value: "es" },
-  { label: "Netherlands", value: "nl" },
-  { label: "Sweden", value: "se" },
-];
 
-const paymentMethods = [
-  { label: "Bank Transfer", value: "banktransfer" },
-  { label: "Paxum", value: "paxum" },
-  { label: "PayPal", value: "paypal" },
-  { label: "Stripe (Credit Cards)", value: "stripe" },
-  { label: "CoinGate (Crypto)", value: "coingate" },
-];
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
@@ -46,6 +28,8 @@ const validationSchema = Yup.object().shape({
 export default function UserInfoForm() {
   const isDarkMode = useColorScheme() === "dark";
   const { showToast } = useToast();
+  const countries = useGlobalStore((state) => state.countries);
+  const paymentMethods = useGlobalStore((state) => state.paymentMethods);
   return (
     <Formik
       initialValues={{
@@ -132,21 +116,21 @@ export default function UserInfoForm() {
               borderWidth: 0.5,
               borderRadius: 8,
               paddingHorizontal: 8,
-              backgroundColor: isDarkMode
-                ? "rgba(38, 38, 79, 1)"
-                : "rgba(244, 243, 249, 1)", // primary-900 (темний) / primary-100 (світлий)
+                     backgroundColor: isDarkMode
+                ? "rgba(25, 25, 53, 1)"
+                : "rgba(244, 243, 249, 1)",
             }}
             placeholderStyle={{
               fontSize: 14,
               color: isDarkMode
                 ? "rgba(196, 196, 196, 1)"
-                : "rgba(59, 60, 87, 1)", // dark (сірий) / primary-700 (темно-фіолетовий)
+                : "rgba(25, 25, 53, 1)",
             }}
             selectedTextStyle={{
               fontSize: 14,
               color: isDarkMode
                 ? "rgba(244, 243, 249, 1)"
-                : "rgba(38, 38, 79, 1)",
+                : "rgba(25, 25, 53, 1)",
             }}
             data={countries}
             labelField="label"
@@ -164,20 +148,20 @@ export default function UserInfoForm() {
               borderRadius: 8,
               paddingHorizontal: 8,
               backgroundColor: isDarkMode
-                ? "rgba(38, 38, 79, 1)"
+                ? "rgba(25, 25, 53, 1)"
                 : "rgba(244, 243, 249, 1)",
             }}
             placeholderStyle={{
               fontSize: 14,
               color: isDarkMode
                 ? "rgba(196, 196, 196, 1)"
-                : "rgba(59, 60, 87, 1)",
+                : "rgba(25, 25, 53, 1)",
             }}
             selectedTextStyle={{
               fontSize: 14,
               color: isDarkMode
                 ? "rgba(244, 243, 249, 1)"
-                : "rgba(38, 38, 79, 1)",
+                : "rgba(25, 25, 53, 1)",
             }}
             data={paymentMethods}
             labelField="label"

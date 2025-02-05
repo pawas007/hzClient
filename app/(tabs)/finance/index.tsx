@@ -1,6 +1,5 @@
 import React from "react";
 import { View, TouchableOpacity, ScrollView } from "react-native";
-// @ts-ignore
 import Icon from "react-native-vector-icons/FontAwesome";
 import Texts from "@/components/Texts";
 import { useRouter } from "expo-router";

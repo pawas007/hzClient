@@ -4,7 +4,6 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import Texts from "@/components/Texts";
 import FormField from "@/components/FormField";
-import { useColorScheme } from "react-native";
 import { useToast } from "@/hooks/useToast";
 
 const validationSchema = Yup.object().shape({
